@@ -2,8 +2,10 @@ import { useState } from "react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isLogin, setIsLogin] = useState(false);
+
   return (
-    <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+    <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 bg-primary-white">
       <div className="relative flex items-center justify-between">
         <div className="flex items-center">
           <a
@@ -39,7 +41,7 @@ const Navbar = () => {
                 title="Our product"
                 className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
               >
-                Product
+                Why Movers?
               </a>
             </li>
             <li>
@@ -49,19 +51,10 @@ const Navbar = () => {
                 title="Our product"
                 className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
               >
-                Features
+                Testimonials
               </a>
             </li>
-            <li>
-              <a
-                href="/"
-                aria-label="Product pricing"
-                title="Product pricing"
-                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-              >
-                Pricing
-              </a>
-            </li>
+
             <li>
               <a
                 href="/"
@@ -69,33 +62,48 @@ const Navbar = () => {
                 title="About us"
                 className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
               >
-                About us
+                Support
               </a>
             </li>
           </ul>
         </div>
-        <ul className="flex items-center hidden space-x-8 lg:flex">
-          <li>
-            <a
-              href="/"
-              aria-label="Sign in"
-              title="Sign in"
-              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-            >
-              Sign in
-            </a>
-          </li>
-          <li>
-            <a
-              href="/"
-              className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 bg-green-500 rounded shadow-md hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-              aria-label="Get Started"
-              title="Get Started"
-            >
-              Get Started
-            </a>
-          </li>
-        </ul>
+        {isLogin ? (
+          <ul className="flex items-center hidden space-x-8 lg:flex">
+            <li>
+              <a
+                href="/"
+                className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 bg-green-500 rounded shadow-md hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                aria-label="Sign up"
+                title="Sign up"
+              >
+                Josiah
+              </a>
+            </li>
+          </ul>
+        ) : (
+          <ul className="flex items-center hidden space-x-8 lg:flex">
+            <li>
+              <a
+                href="/"
+                aria-label="Sign in"
+                title="Sign in"
+                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+              >
+                Login
+              </a>
+            </li>
+            <li>
+              <a
+                href="/"
+                className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 bg-green-500 rounded shadow-md hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                aria-label="Sign up"
+                title="Sign up"
+              >
+                Get Started
+              </a>
+            </li>
+          </ul>
+        )}
         <div className="lg:hidden">
           <button
             aria-label="Open Menu"
@@ -120,7 +128,7 @@ const Navbar = () => {
           </button>
           {isMenuOpen && (
             <div className="absolute top-0 left-0 w-full">
-              <div className="p-5 bg-white border rounded shadow-sm">
+              <div className="p-5 border rounded shadow-sm bg-primary-white">
                 <div className="flex items-center justify-between mb-4">
                   <div>
                     <a
@@ -197,26 +205,41 @@ const Navbar = () => {
                         Support
                       </a>
                     </li>
-                    <li>
-                      <a
-                        href="/"
-                        aria-label="Sign in"
-                        title="Sign in"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                      >
-                        Login
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/"
-                        className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 bg-green-500 rounded shadow-md hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                        aria-label="Get Started"
-                        title="Get Started"
-                      >
-                        Get Started
-                      </a>
-                    </li>
+                    {isLogin ? (
+                        <li>
+                          <a
+                            href="/"
+                            className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 bg-green-500 rounded shadow-md hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                            aria-label="Sign up"
+                            title="Sign up"
+                          >
+                            Josiah
+                          </a>
+                        </li>
+                    ) : (
+                      <>
+                        <li>
+                          <a
+                            href="/"
+                            aria-label="Sign in"
+                            title="Sign in"
+                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          >
+                            Login
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/"
+                            className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 bg-green-500 rounded shadow-md hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                            aria-label="Sign up"
+                            title="Sign up"
+                          >
+                            Get Started
+                          </a>
+                        </li>
+                      </>
+                    )}
                   </ul>
                 </nav>
               </div>
