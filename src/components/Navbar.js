@@ -8,8 +8,8 @@ const Navbar = () => {
         <div className="flex items-center">
           <a
             href="/"
-            aria-label="Company"
-            title="Company"
+            aria-label="Movers"
+            title="Movers"
             className="inline-flex items-center mr-8"
           >
             <svg
@@ -19,7 +19,7 @@ const Navbar = () => {
               strokeWidth="2"
               strokeLinecap="round"
               strokeMiterlimit="10"
-              stroke="currentColor"
+              stroke="#08CF65"
               fill="none"
             >
               <rect x="3" y="1" width="7" height="12" />
@@ -28,7 +28,7 @@ const Navbar = () => {
               <rect x="14" y="11" width="7" height="12" />
             </svg>
             <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-              Company
+              Movers
             </span>
           </a>
           <ul className="flex items-center hidden space-x-8 lg:flex">
@@ -88,11 +88,11 @@ const Navbar = () => {
           <li>
             <a
               href="/"
-              className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-              aria-label="Sign up"
-              title="Sign up"
+              className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 bg-green-500 rounded shadow-md hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+              aria-label="Get Started"
+              title="Get Started"
             >
-              Sign up
+              Get Started
             </a>
           </li>
         </ul>
@@ -125,8 +125,8 @@ const Navbar = () => {
                   <div>
                     <a
                       href="/"
-                      aria-label="Company"
-                      title="Company"
+                      aria-label="Movers"
+                      title="Movers"
                       className="inline-flex items-center"
                     >
                       <svg
@@ -136,7 +136,7 @@ const Navbar = () => {
                         strokeWidth="2"
                         strokeLinecap="round"
                         strokeMiterlimit="10"
-                        stroke="currentColor"
+                        stroke="#08CF65"
                         fill="none"
                       >
                         <rect x="3" y="1" width="7" height="12" />
@@ -145,7 +145,7 @@ const Navbar = () => {
                         <rect x="14" y="11" width="7" height="12" />
                       </svg>
                       <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                        Company
+                        Movers
                       </span>
                     </a>
                   </div>
@@ -174,7 +174,7 @@ const Navbar = () => {
                         title="Our product"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
-                        Product
+                        Why Movers?
                       </a>
                     </li>
                     <li>
@@ -184,27 +184,17 @@ const Navbar = () => {
                         title="Our product"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
-                        Features
+                        Testimonials
                       </a>
                     </li>
                     <li>
                       <a
                         href="/"
-                        aria-label="Product pricing"
-                        title="Product pricing"
+                        aria-label="Support"
+                        title="Support"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
-                        Pricing
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/"
-                        aria-label="About us"
-                        title="About us"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                      >
-                        About us
+                        Support
                       </a>
                     </li>
                     <li>
@@ -214,17 +204,17 @@ const Navbar = () => {
                         title="Sign in"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
-                        Sign in
+                        Login
                       </a>
                     </li>
                     <li>
                       <a
                         href="/"
-                        className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                        aria-label="Sign up"
-                        title="Sign up"
+                        className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 bg-green-500 rounded shadow-md hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                        aria-label="Get Started"
+                        title="Get Started"
                       >
-                        Sign up
+                        Get Started
                       </a>
                     </li>
                   </ul>

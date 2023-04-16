@@ -1,5 +1,5 @@
-import Navbar from "components/Navbar";
-import Landing from "pages/Landing";
+import { Navbar } from "components";
+import { Login } from "pages";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
       <Navbar />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Landing />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </BrowserRouter>
     </>
