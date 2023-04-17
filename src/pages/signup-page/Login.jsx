@@ -45,9 +45,9 @@ import { MailIcon, KeyIcon } from '@heroicons/react/solid';
                 Email
               </label>
               <div className="relative w-full">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  
-                </div>
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none          
+                <MailIcon className="h-5 w-5 text-green-500" /> 
+                  </div>
                 <input
                   type="email"
                   name="email"
@@ -68,7 +68,7 @@ import { MailIcon, KeyIcon } from '@heroicons/react/solid';
               </label>
               <div className="relative w-full">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  
+                <KeyIcon className="h-5 w-5 text-green-500" />
                 </div>
                 <input
                   type="password"
