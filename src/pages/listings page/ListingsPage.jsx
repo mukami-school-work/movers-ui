@@ -1,3 +1,5 @@
+import "./global.css";
+
 const ListingsPage = () => {
   return (
     <div className="relative bg-azure w-full md:shrink-1 h-[1024px] overflow-visible flex flex-col flex-1 items-center justify-start text-center text-[18px] text-body-text-100 md:justify-items-center sm: justify-items-center font-open-sans">
