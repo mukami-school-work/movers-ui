@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isLogin, setIsLogin] = useState(true);
+  const [isLogin, setIsLogin] = useState(false);
 
   return (
     <div className="lg:max-w-screen-full bg-primary-white">
@@ -12,8 +12,8 @@ const Navbar = () => {
           <div className="flex items-center">
             <a
               href="/"
-              aria-label="Movers"
-              title="Movers"
+              aria-label="Logo"
+              title="Logo"
               className="inline-flex items-center mr-8"
             >
               <svg
@@ -31,17 +31,17 @@ const Navbar = () => {
                 <rect x="14" y="1" width="7" height="6" />
                 <rect x="14" y="11" width="7" height="12" />
               </svg>
-              <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
+              <span className="ml-5 mr-3 text-2xl font-bold tracking-wide text-gray-800">
                 Movers
               </span>
             </a>
-            <ul className="flex items-center hidden space-x-8 lg:flex">
+            <ul className="flex items-center hidden space-x-8 font-semibold lg:flex">
               <li>
                 <a
                   href="/"
-                  aria-label="Our product"
-                  title="Our product"
-                  className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                  aria-label="Services"
+                  title="Services"
+                  className="text-sm tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                 >
                   Why Movers?
                 </a>
@@ -49,9 +49,9 @@ const Navbar = () => {
               <li>
                 <a
                   href="/"
-                  aria-label="Our product"
-                  title="Our product"
-                  className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                  aria-label="Testimonials"
+                  title="Testimonials"
+                  className="text-sm tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                 >
                   Testimonials
                 </a>
@@ -62,7 +62,7 @@ const Navbar = () => {
                   href="/"
                   aria-label="About us"
                   title="About us"
-                  className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                  className="text-sm tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                 >
                   Support
                 </a>
@@ -78,19 +78,33 @@ const Navbar = () => {
               <li>
                 <a
                   href="/"
-                  aria-label="Sign in"
-                  title="Sign in"
-                  className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                  aria-label="Login"
+                  title="Login"
+                  className="flex text-sm font-semibold tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                 >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-5 h-5 mr-2"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9"
+                    />
+                  </svg>
                   Login
                 </a>
               </li>
               <li>
                 <a
                   href="/"
-                  className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 bg-green-500 rounded shadow-md hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                  aria-label="Sign up"
-                  title="Sign up"
+                  className="inline-flex items-center justify-center h-12 px-6 text-sm font-semibold tracking-wide text-white transition duration-200 rounded shadow-md bg-primary-green hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                  aria-label="Create Account"
+                  title="Create Account"
                 >
                   Get Started
                 </a>
@@ -126,8 +140,8 @@ const Navbar = () => {
                     <div>
                       <a
                         href="/"
-                        aria-label="Movers"
-                        title="Movers"
+                        aria-label="Logo"
+                        title="Logo"
                         className="inline-flex items-center"
                       >
                         <svg
@@ -145,7 +159,7 @@ const Navbar = () => {
                           <rect x="14" y="1" width="7" height="6" />
                           <rect x="14" y="11" width="7" height="12" />
                         </svg>
-                        <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
+                        <span className="ml-5 mr-3 text-2xl font-bold tracking-wide text-gray-800">
                           Movers
                         </span>
                       </a>
@@ -167,13 +181,13 @@ const Navbar = () => {
                     </div>
                   </div>
                   <nav>
-                    <ul className="space-y-4">
+                    <ul className="space-y-4 font-semibold">
                       <li>
                         <a
                           href="/"
                           aria-label="Services"
                           title="Services"
-                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          className="text-sm tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                         >
                           Why Movers?
                         </a>
@@ -183,7 +197,7 @@ const Navbar = () => {
                           href="/"
                           aria-label="About Us"
                           title="About Us"
-                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          className="text-sm tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                         >
                           Testimonials
                         </a>
@@ -193,7 +207,7 @@ const Navbar = () => {
                           href="/"
                           aria-label="Contact Us"
                           title="Contact Us"
-                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          className="text-sm tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                         >
                           Support
                         </a>
@@ -205,7 +219,7 @@ const Navbar = () => {
                               href="/"
                               aria-label="Edit Profile"
                               title="Edit Profile"
-                              className="flex font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                              className="flex text-sm tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                             >
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -227,7 +241,7 @@ const Navbar = () => {
                           <li>
                             <a
                               href="/"
-                              className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-primary-green hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                              className="inline-flex items-center justify-center w-full h-12 px-6 text-sm tracking-wide text-white transition duration-200 rounded shadow-md bg-primary-green hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
                               aria-label="Log Out"
                               title="Log Out"
                             >
@@ -240,7 +254,7 @@ const Navbar = () => {
                           <li>
                             <a
                               href="/"
-                              className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-primary-green hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                              className="inline-flex items-center justify-center w-full h-12 px-6 text-sm tracking-wide text-white transition duration-200 rounded shadow-md bg-primary-green hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
                               aria-label="Create Account"
                               title="Create Account"
                             >
