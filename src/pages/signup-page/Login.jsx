@@ -32,7 +32,17 @@ import { MailIcon, KeyIcon } from '@heroicons/react/solid';
     
 
   return (
-    <div>Login</div>
+    <div className="flex justify-center items-center w-full h-screen bg-gray-100">
+      <div className="flex w-3/4 mx-auto bg-white rounded-lg shadow-md">
+        <div className="w-1/2 p-10">
+          <img src="/signin.jpg" alt="Login" className="h-full w-full object-cover rounded-lg" />
+        </div>
+        <div className="w-1/2 p-10 flex flex-col items-center">
+          <h1 className="text-3xl font-bold mb-6 text-green-600">Welcome Back</h1>
+          </div>
+          </div>
+          </div>
+          
   );
 }
 
