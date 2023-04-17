@@ -11,6 +11,7 @@
   box-sizing: border-box;
   font-family: TT Norms Pro, Poppins, sans-serif;
 }
-.logo {
-  font-family: "Ringtail Sans Serif Personal Use", TT Norms Pro;
+
+body {
+  background-color: #ebf5f3;
 }
