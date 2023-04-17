@@ -9,6 +9,9 @@ module.exports = {
         "sec-white": "#F5F2EB",
         "primary-green": "#08cf65",
       },
+      grayscale: {
+        50: "50%",
+      },
     },
   },
   plugins: [require("flowbite/plugin")],
