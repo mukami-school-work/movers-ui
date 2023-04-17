@@ -7,7 +7,7 @@ const Navbar = () => {
 
   return (
     <div className="lg:max-w-screen-full bg-primary-white">
-      <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 bg-primary-white">
+      <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-8 bg-primary-white">
         <div className="relative flex items-center justify-between">
           <div className="flex items-center">
             <a
@@ -102,7 +102,7 @@ const Navbar = () => {
               <li>
                 <a
                   href="/"
-                  className="inline-flex items-center justify-center h-12 px-6 text-sm font-semibold tracking-wide text-white transition duration-200 rounded shadow-md bg-primary-green hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                  className="inline-flex items-center justify-center h-12 px-6 text-sm font-semibold tracking-wide text-white transition duration-200 rounded-lg shadow-md bg-primary-green hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
                   aria-label="Create Account"
                   title="Create Account"
                 >
@@ -241,7 +241,7 @@ const Navbar = () => {
                           <li>
                             <a
                               href="/"
-                              className="inline-flex items-center justify-center w-full h-12 px-6 text-sm tracking-wide text-white transition duration-200 rounded shadow-md bg-primary-green hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                              className="inline-flex items-center justify-center w-full h-12 px-6 text-sm tracking-wide text-white transition duration-200 rounded-lg shadow-md bg-primary-green hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
                               aria-label="Log Out"
                               title="Log Out"
                             >
@@ -254,7 +254,7 @@ const Navbar = () => {
                           <li>
                             <a
                               href="/"
-                              className="inline-flex items-center justify-center w-full h-12 px-6 text-sm tracking-wide text-white transition duration-200 rounded shadow-md bg-primary-green hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                              className="inline-flex items-center justify-center w-full h-12 px-6 text-sm tracking-wide text-white transition duration-200 rounded-lg shadow-md bg-primary-green hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
                               aria-label="Create Account"
                               title="Create Account"
                             >
