@@ -86,6 +86,11 @@ import { MailIcon, KeyIcon } from '@heroicons/react/solid';
               Log In
             </button>
           </form>
+          div className="flex justify-between items-center mt-4 w-full">
+        <a href="/forgot-password" className="text-green-600 hover:underline">
+          Forgot Password
+        </a>
+        <div></div>
           </div>
           </div>
           </div>
