@@ -1,5 +1,5 @@
+import Login from "./pages/signup-page/Login";
 import { Features, Hero, Navbar } from "components";
-import { Login } from "pages";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
