@@ -6,7 +6,7 @@ import {CloudinaryImage} from '@cloudinary/url-gen';
 import ListingsPage from "./pages/listings page/ListingsPage";
 
 function App() {
-  const myImage = new CloudinaryImage('sample', {cloudName: 'dsnhbp0tg'}).resize(fill().width(100).height(50));
+  const myImage = new CloudinaryImage('sample', {cloudName: 'dsnhbp0tg'}).resize(fill().width(100).height(150));
   return (
     <>
       <Navbar />
