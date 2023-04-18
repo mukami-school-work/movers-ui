@@ -18,6 +18,23 @@ function Signup() {
   const onSubmit = (data) => {
     console.log(data);
   };
+  const handleEmailChange = (e) => {
+    const validEmailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+    if (!validEmailRegex.test(e.target.value)) {
+      setEmailError('Invalid email address');
+    } else {
+      setEmailError('');
+    }
+  };
+
+  const handlePasswordChange = (e) => {
+    const { value } = e.target;
+    if (value.length < 8) {
+      setPasswordError('Password must be at least 8 characters long');
+    } else {
+      setPasswordError('');
+    }
+  };
 
   return (
     <div>Signup</div>
