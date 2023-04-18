@@ -8,6 +8,16 @@ function Signup() {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [emailError, setEmailError] = useState('');
   const [passwordError, setPasswordError] = useState('');
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm({ mode: 'onBlur' });
+
+  const onSubmit = (data) => {
+    console.log(data);
+  };
 
   return (
     <div>Signup</div>
