@@ -1,4 +1,5 @@
 import Card from "./Card";
+// import CardReview from "./CardReview";
 import "./global.css";
 
 const ListingsPage = () => {
@@ -10,6 +11,11 @@ const ListingsPage = () => {
           <Card />
           <Card />
           <Card />
+          {/* <CardReview />
+          <CardReview />
+          <CardReview />
+          <CardReview />
+          <CardReview /> */}
         </div>
       </div>
     </div>

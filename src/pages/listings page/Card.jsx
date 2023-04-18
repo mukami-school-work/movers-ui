@@ -27,7 +27,7 @@ function Card() {
             </div>
             <h2 className="mt-2 mb-2 font-bold">International Van Lines</h2>
             <div class="relative sm:w-1/2 md:w-1/2 xl:w-1/4">
-              <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+              {/* <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                 <thead class="text-xs text-gray-700 uppercase dark:text-gray-400"></thead>
                 <tbody>
                   <tr class="border-b border-gray-200 dark:border-gray-700">
@@ -58,7 +58,7 @@ function Card() {
                     <td class="px-6 py-4">Yes</td>
                   </tr>
                 </tbody>
-              </table>
+              </table> */}
             </div>
           </div>
           <span className="p-4 mt-2 text-sm font-semibold">
