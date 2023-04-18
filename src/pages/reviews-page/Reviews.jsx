@@ -6,7 +6,7 @@ function Reviews() {
             <div className="flex justify-center w-screen h-screen px-4 text-gray-700">
                 <div className="flex w-full max-w-screen-lg">
                     <div className="flex flex-col w-64 py-4 pr-3">
-                        <a className="px-3 py-2 mt-2 text-lg font-medium rounded-sm hover:bg-gray-300" href="#">Home</a>
+                        {/* <a className="px-3 py-2 mt-2 text-lg font-medium rounded-sm hover:bg-gray-300" href="#">Home</a>
                         <a className="px-3 py-2 mt-2 text-lg font-medium rounded-sm hover:bg-gray-300" href="#">Discover</a>
                         <a className="px-3 py-2 mt-2 text-lg font-medium rounded-sm hover:bg-gray-300" href="#">Notifications</a>
                         <a className="px-3 py-2 mt-2 text-lg font-medium rounded-sm hover:bg-gray-300" href="#">Inbox</a>
@@ -19,7 +19,7 @@ function Reviews() {
                                 <span className="mt-1 text-sm font-semibold leading-none">Username</span>
                                 <span className="mt-1 text-xs leading-none">@username</span>
                             </div>
-                        </a>
+                        </a> */}
                     </div>
                     <div className="flex flex-col flex-grow border-l border-r border-gray-300">
                         <div className="flex justify-between flex-shrink-0 px-8 py-4 border-b border-gray-300">
@@ -160,9 +160,9 @@ function Reviews() {
                             </div>
                         </div>
                     </div>
-                    {/* <div className="flex flex-col flex-shrink-0 w-1/4 py-4 pl-4">
-                        <input className="flex items-center h-8 px-2 border border-gray-500 rounded-sm" type="search" Placeholder="Search…"/>
-                        <div>
+                    <div className="flex flex-col flex-shrink-0 w-1/4 py-4 pl-4">
+                        {/* <input className="flex items-center h-8 px-2 border border-gray-500 rounded-sm" type="search" Placeholder="Search…"/> */}
+                        {/* <div>
                             <h3 className="mt-6 font-semibold">Trending</h3>
                             <div className="flex w-full py-4 border-b border-gray-300">
                                 <span className="flex-shrink-0 w-10 h-10 bg-gray-400 rounded-full"></span>
@@ -195,7 +195,7 @@ function Reviews() {
                                 </div>
                             </div>*/}
                         {/* </div>  */}
-                    {/* </div> */}
+                    </div>
                 </div>
             </div>
 
