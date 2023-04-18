@@ -5,6 +5,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import {fill} from "@cloudinary/url-gen/actions/resize";
 import {CloudinaryImage} from '@cloudinary/url-gen';
 import ListingsPage from "./pages/listings page/ListingsPage";
+import BoxesRange from "./pages/boxes-page/BoxesRange";
+
 
 function App() {
   const myImage = new CloudinaryImage('sample', {cloudName: 'dsnhbp0tg'}).resize(fill().width(100).height(150));
@@ -18,6 +20,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/movers" element={<ListingsPage />} />
+          <Route path="/boxes" element={<BoxesRange />} />
         </Routes>
       </BrowserRouter>
     </>
