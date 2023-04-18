@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       colors: {
         azure: "#ebf5f3",
+        azhure: "#a7c4be",
         slategray: "#657694",
         "heading-text": "#081f32",
         white: "#fff",
