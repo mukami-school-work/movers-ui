@@ -48,7 +48,5 @@ module.exports = {
       "8xl": "27px",
       lg: "18px",
     },
-  },
-  corePlugins: { preflight: false },
-  plugins: [require("flowbite/plugin")],
-};
+    corePlugins: { preflight: false },
+  }
