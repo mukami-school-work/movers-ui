@@ -45,7 +45,18 @@ function Signup() {
   };
 
   return (
-    <div>Signup</div>
+    <div className="flex justify-center items-center w-full h-screen">
+    <div className="flex flex-col lg:flex-row w-full mx-auto bg-white rounded-lg shadow-md">
+    <div className="w-full lg:w-1/2 p-10">
+    <img src="/login.jpg" alt="Sign Up" className="h-full w-full object-cover rounded-lg"  />
+
+      </div>
+    
+    <div className="flex flex-col justify-center items-center md:w-1/2 px-4 py-8">
+      <h1 className="text-3xl font-bold text-green-800 mb-4">Sign Up</h1>
+      </div>
+    </div>
+  </div>
   )
 }
 
