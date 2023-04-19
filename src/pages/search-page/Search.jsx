@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { ArrowRightIcon, SearchIcon } from '@heroicons/react/outline';
+
 
 function Search() {
     const [searchQuery, setSearchQuery] = useState('');
@@ -140,7 +142,7 @@ function Search() {
     </div>
         </div>
     </div>
-  )
+  );
 }
 
 export default Search
