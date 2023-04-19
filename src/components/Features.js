@@ -9,7 +9,7 @@ const Features = () => {
               Why Movers?
             </p>
           </div>
-          <h2 className="max-w-3xl mb-6 font-sans font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
+          <h2 className="max-w-3xl mb-6 font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
             <span className="relative inline-block">
               <svg
                 viewBox="0 0 52 24"

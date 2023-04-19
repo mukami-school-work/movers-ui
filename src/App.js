@@ -1,3 +1,4 @@
+import { Landing } from "pages";
 import Reviews from "pages/reviews-page/Reviews";
 import Signup from "./pages/signup-page/Signup";
 import Login from "./pages/signup-page/Login";
@@ -17,12 +18,16 @@ function App() {
       <Navbar />
       <BrowserRouter>
         <Routes>
+
+          <Route path="/" element={<Landing />} />
+
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/movers" element={<ListingsPage />} />
           <Route path="/boxes" element={<BoxesRange />} />
           <Route path="/search" element={<Search />} />
           <Route path="/reviews" element={<Reviews />} />
+
         </Routes>
       </BrowserRouter>
     </>
