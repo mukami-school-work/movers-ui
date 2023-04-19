@@ -6,6 +6,7 @@ import {fill} from "@cloudinary/url-gen/actions/resize";
 import {CloudinaryImage} from '@cloudinary/url-gen';
 import ListingsPage from "./pages/listings page/ListingsPage";
 import BoxesRange from "./pages/boxes-page/BoxesRange";
+import Search from "pages/search-page/Search";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/movers" element={<ListingsPage />} />
           <Route path="/boxes" element={<BoxesRange />} />
+          <Route path="/search" element={<Search />} />
         </Routes>
       </BrowserRouter>
     </>
