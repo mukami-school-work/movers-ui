@@ -1,3 +1,4 @@
+import Reviews from "pages/reviews-page/Reviews";
 import Signup from "./pages/signup-page/Signup";
 import Login from "./pages/signup-page/Login";
 import { Features, Hero, Navbar } from "./components";
@@ -18,6 +19,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/movers" element={<ListingsPage />} />
+          <Route path="/reviews" element={<Reviews />} />
         </Routes>
       </BrowserRouter>
     </>
