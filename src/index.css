@@ -39,3 +39,11 @@ body {
   transition: transform 0.3s ease-in-out;
   transform: scale(1.05);
 }
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
