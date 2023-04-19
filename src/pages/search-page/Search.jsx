@@ -52,7 +52,19 @@ function Search() {
     setCartItems(newCartItems);
   };
   return (
-    <div>Search</div>
+    <div className="min-h-screen bg-gray-100">
+      {/* Navbar */}
+      <nav className="bg-white py-4 px-8 shadow-md">
+        {/* Navbar content goes here */}
+      </nav>
+
+      {/* Main Content */}
+      <div className="max-w-4xl mx-auto px-8 py-16 flex flex-col items-center">
+        <h1 className="text-4xl text-green-600 text-center mb-6">
+          What would you like to move?
+        </h1>
+        </div>
+    </div>
   )
 }
 
