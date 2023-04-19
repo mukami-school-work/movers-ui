@@ -32,9 +32,14 @@ function BoxesRange() {
             </button>
           ))}
         </div>
+        <div className="flex justify-end mt-8">
+          <button className="flex items-center justify-center h-10 md:h-12 px-4 rounded-lg bg-green-500 text-white">
+            Next <FaArrowRight className="ml-2" />
+          </button>
+        </div>
       </div>
       </div>
-  )
+  );
 }
 
 export default BoxesRange
