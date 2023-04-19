@@ -21,6 +21,7 @@ module.exports = {
         "primary-white": "#ebf5f3",
         "primary-brown": "#F5F2EB",
         "primary-green": "#08cf65",
+        "primary-green-400": "#10B981",
         "primary-yellow": "#F7C94A",
        },
        grayscale: {
