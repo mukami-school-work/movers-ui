@@ -8,6 +8,7 @@ module.exports = {
         "primary-white": "#ebf5f3",
         "sec-white": "#F5F2EB",
         "primary-green": "#08cf65",
+        "primary-green-400": "#10B981",
       },
       grayscale: {
         50: "50%",
