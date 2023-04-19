@@ -1,10 +1,9 @@
 import Card from "./Card";
 // import CardReview from "./CardReview";
-import "./global.css";
 
 const ListingsPage = () => {
   return (
-    <div className="bg-azure text-gray-900 font-sans p-6">
+    <div className="p-6 font-sans text-gray-900 bg-azure">
       <div className="container mx-auto">
         <div className="flex flex-wrap -mx-4">
           <Card />
