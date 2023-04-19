@@ -1,7 +1,7 @@
 import Reviews from "pages/reviews-page/Reviews";
 import Signup from "./pages/signup-page/Signup";
 import Login from "./pages/signup-page/Login";
-import { Features, Hero, Navbar } from "./components";
+import Navbar from "./components/Navbar"
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import {fill} from "@cloudinary/url-gen/actions/resize";
 import {CloudinaryImage} from '@cloudinary/url-gen';
@@ -12,8 +12,6 @@ function App() {
   return (
     <>
       <Navbar />
-      {/* <Hero /> */}
-      {/* <Features /> */}
       <BrowserRouter>
         <Routes>
           <Route path="/login" element={<Login />} />
