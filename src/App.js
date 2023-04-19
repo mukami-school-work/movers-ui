@@ -14,8 +14,8 @@ function App() {
   return (
     <>
       <Navbar />
-      {/* <Hero /> */}
-      {/* <Features /> */}
+      <Hero />
+      <Features />
       <BrowserRouter>
         <Routes>
           <Route path="/login" element={<Login />} />
