@@ -5,9 +5,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 function App() {
   return (
     <>
-      <Navbar />
-      <Hero />
-      <Features />
+      {/* <Navbar /> */}
+      {/* <Hero /> */}
+      {/* <Features /> */}
       <BrowserRouter>
         <Routes>
           <Route path="/login" element={<Login />} />
