@@ -27,6 +27,26 @@ function Search() {
     }
   };
 
+  const handleIncreaseQuantity = (item) => {
+    const index = cartItems.findIndex((cartItem) => cartItem.id === item.id);
+    if (index >= 0) {
+      const newCartItems = [...cartItems];
+      newCartItems[index].quantity += 1;
+      setCartItems(newCartItems);
+    }
+  };
+
+  const handleDecreaseQuantity = (item) => {
+    const index = cartItems.findIndex((cartItem) => cartItem.id === item.id);
+    if (index >= 0) {
+      const newCartItems = [...cartItems];
+      newCartItems[index].quantity -= 1;
+      setCartItems(newCartItems);
+    }
+  };
+
+  const totalPrice = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+
   const handleRemoveFromCart = (item) => {
     const newCartItems = cartItems.filter((cartItem) => cartItem.id !== item.id);
     setCartItems(newCartItems);
