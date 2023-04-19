@@ -36,7 +36,7 @@ function Login() {
           <img src="/signin.jpg" alt="Login" className="h-full w-full object-cover rounded-lg" />
         </div>
         <div className="w-full lg:w-1/2 p-10 flex flex-col items-center">
-          <h1 className="text-3xl font-bold mb-6 text-green-600">Welcome Back</h1>
+          <h1 className="text-3xl font-bold mb-6 text-black">Welcome Back</h1>
           <form onSubmit={handleSubmit} className="w-full">
             <div className="mb-4 w-full">
               <label htmlFor="email" className="sr-only">
