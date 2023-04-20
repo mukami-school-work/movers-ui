@@ -9,6 +9,7 @@ import {CloudinaryImage} from '@cloudinary/url-gen';
 import ListingsPage from "./pages/listings page/ListingsPage";
 import BoxesRange from "./pages/boxes-page/BoxesRange";
 import Search from "pages/search-page/Search";
+import Profile from "pages/profile-page/Profile";
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path="/boxes" element={<BoxesRange />} />
           <Route path="/search" element={<Search />} />
           <Route path="/reviews" element={<Reviews />} />
+          <Route path="/profile" element={<Profile />} />
 
         </Routes>
       </BrowserRouter>
