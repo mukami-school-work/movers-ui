@@ -35,7 +35,7 @@ const Navbar = () => {
                 Movers
               </span>
             </a>
-            <ul className="flex items-center hidden space-x-8 font-semibold lg:flex">
+            <ul className="flex items-center hidden space-x-8 font-semibold list-none lg:flex">
               <li>
                 <a
                   href="/"

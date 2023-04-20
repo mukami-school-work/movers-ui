@@ -1,5 +1,3 @@
-import Login from "pages/Login";
+import Landing from "./Landing";
 
-export {
-  Login
-}
+export { Landing };

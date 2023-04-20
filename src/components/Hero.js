@@ -8,7 +8,7 @@ import shift from "../assets/shift.svg";
 export default function Hero() {
   return (
     <>
-      <section className="dark:bg-gray-800 dark:text-gray-100">
+      <section className=" dark:bg-gray-800 dark:text-gray-100">
         <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-16 lg:flex-row lg:justify-between">
           {/* Banner CTA Section */}
           <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-2xl lg:text-left">
@@ -45,6 +45,9 @@ export default function Hero() {
 
         {/* Trusted Companies Section */}
         <div class="px-4 mx-auto mb-16 text-center md:max-w-screen-md lg:max-w-screen-2xl lg:px-36">
+          <span class="font-semibold uppercase sponsor">
+            TRUSTED BY 20,000+ ORGANIZATIONS WORLDWIDE
+          </span>
           <div class="flex flex-wrap justify-center items-center my-8 text-gray-500 sm:justify-between">
             <a
               href="/"
@@ -97,9 +100,6 @@ export default function Hero() {
               />
             </a>
           </div>
-          <span class="font-semibold uppercase sponsor">
-            TRUSTED BY 20,000+ ORGANIZATIONS WORLDWIDE
-          </span>
         </div>
       </section>
     </>
