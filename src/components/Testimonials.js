@@ -9,7 +9,7 @@ const Testimonials = () => {
         {/* <!-- End Gradients --> */}
         <div className="flex flex-col items-center">
           <div>
-            <p className="inline-block px-3 py-px text-lg font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
+            <p className="inline-block px-3 py-px text-xl font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
               Testimonials
             </p>
           </div>
@@ -67,7 +67,7 @@ const Testimonials = () => {
                   </g>
                 </g>
               </svg>
-              <p class="text-xl lg:mt-7 font-medium text-gray-800 lg:text-2xl lg:leading-normal dark:text-gray-200">
+              <p class="text-xl lg:mt-7 font-medium text-gray-800 lg:text-xl lg:leading-normal dark:text-gray-200">
                 "To say that switching to Preline has been life-changing is an
                 understatement. My business has tripled and I got my life back.
                 To say that switching to Preline has been life-changing is an
