@@ -96,7 +96,7 @@ const Testimonials = () => {
                   </g>
                 </g>
               </svg>
-              <p class="text-xl lg:mt-7 font-medium text-gray-800 lg:text-2xl lg:leading-normal dark:text-gray-200">
+              <p class="text-xl lg:mt-7 font-medium text-gray-800 lg:text-xl lg:leading-normal dark:text-gray-200">
                 "To say that switching to Preline has been life-changing is an
                 understatement. My business has tripled and I got my life back.
                 To say that switching to Preline has been life-changing is an
