@@ -1,12 +1,20 @@
-import { Features, Footer, Hero, Team, Testimonials } from "components";
+import {
+  Features,
+  Footer,
+  Hero,
+  InfoCard,
+  Team,
+  Testimonials,
+} from "components";
 
 const Landing = () => {
   return (
     <>
       <Hero />
       <Features />
-      <Team />
       <Testimonials />
+      <InfoCard />
+      <Team />
       <Footer />
     </>
   );
