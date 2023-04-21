@@ -8,7 +8,7 @@ import shift from "../assets/shift.svg";
 export default function Hero() {
   return (
     <>
-      <section className=" dark:bg-gray-800 dark:text-gray-100">
+      <section className="mt-16 dark:bg-gray-800 bg-primary-white dark:text-gray-100">
         <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-16 lg:flex-row lg:justify-between">
           {/* Banner CTA Section */}
           <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-2xl lg:text-left">
