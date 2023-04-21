@@ -10,13 +10,13 @@ const Testimonials = () => {
         <div className="max-w-xl my-10 md:mx-auto sm:text-center lg:max-w-3xl md:mb-12">
           <div>
             <p className="inline-block px-3 py-px mb-4 text-xl font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
-              Stories
+              Testimonials
             </p>
           </div>
           <h2 className="max-w-3xl mb-6 font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
             <span className="relative inline-block">
               <svg
-                viewBox="0 0 52 24"
+                viewBox="0 0 32 14"
                 fill="currentColor"
                 className="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
               >
@@ -37,9 +37,9 @@ const Testimonials = () => {
                   height="24"
                 />
               </svg>
-              <span className="relative text-5xl">Testimonies</span>
+              <span className="relative text-5xl">Stories</span>
             </span>{" "}
-            <span className="text-5xl">from customers</span>
+            <span className="text-5xl">from our customers</span>
           </h2>
           <p className="font-medium text-gray-700 lg:text-lg md:text-sm">
             We not only ensure your confidence in us, we also go miles to

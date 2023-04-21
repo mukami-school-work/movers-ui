@@ -12,7 +12,7 @@ const Features = () => {
           <h2 className="max-w-3xl mb-6 font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
             <span className="relative inline-block">
               <svg
-                viewBox="0 0 52 24"
+                viewBox="0 0 32 14"
                 fill="currentColor"
                 className="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
               >
@@ -35,7 +35,7 @@ const Features = () => {
               </svg>
               <span className="relative text-5xl">We</span>
             </span>{" "}
-            <span className="text-5xl">Are Simply The Best</span>
+            <span className="text-5xl">are simply the best</span>
           </h2>
           <p className="font-medium text-center text-gray-700 lg:text-lg md:text-sm">
             We provide a unique and valuable experience for our users by
