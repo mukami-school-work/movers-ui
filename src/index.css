@@ -6,6 +6,7 @@
 @import url("https://fonts.cdnfonts.com/css/ringtail-sans-serif-personal-use");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.cdnfonts.com/css/estellothy");
+@import url('https://fonts.cdnfonts.com/css/san-marino-beach');
 
 * {
   margin: 0;
@@ -14,9 +15,9 @@
   font-family: Montserrat, Poppins, sans-serif;
 }
 
-body {
+/* body {
   background-color: #ebf5f3;
-}
+} */
 
 .cta-title {
   font-family: "Estellothy";
@@ -26,14 +27,14 @@ body {
 
 .sponsor {
   font-size: 20px;
-  margin-bottom: -8px;
+  /* margin-bottom: -8px; */
   color: rgb(167, 167, 167);
 }
-
+/* 
 .sponsor.child {
   font-size: 14px;
   color: rgb(167, 167, 167);
-}
+} */
 
 .c-card:hover img {
   transition: transform 0.3s ease-in-out;
@@ -46,4 +47,18 @@ a {
 
 ul {
   list-style: none;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 100;
+  transition: all 0.3s ease-in-out;
+}
+
+.quote {
+  font-family: 'San Marino Beach', sans-serif;
 }
