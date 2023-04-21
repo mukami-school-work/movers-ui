@@ -35,7 +35,7 @@ const Features = () => {
               </svg>
               <span className="relative text-5xl">We</span>
             </span>{" "}
-            <span className="text-5xl">are simply the best</span>
+            <span className="text-5xl">Are Simply The Best</span>
           </h2>
           <p className="font-medium text-center text-gray-700 lg:text-lg md:text-sm">
             We provide a unique and valuable experience for our users by
