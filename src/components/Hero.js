@@ -18,8 +18,7 @@ export default function Hero() {
             </h1>
             <p className="mt-6 mb-8 text-lg sm:mb-12">
               Your all-in-one platform to get you started and sorted when
-              moving,
-              <br className="hidden md:inline lg:hidden" />
+              moving, <br className="hidden md:inline lg:hidden" />
               linking you to the best moving companies at affordable rates.
             </p>
             <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
@@ -44,7 +43,7 @@ export default function Hero() {
         </div>
 
         {/* Trusted Companies Section */}
-        <div class="px-4 mx-auto mb-16 text-center md:max-w-screen-md lg:max-w-screen-2xl lg:px-36">
+        <div class="px-4 mx-auto mb-16 text-center text-[1px] md:max-w-screen-md lg:max-w-screen-2xl lg:px-36">
           <span class="font-semibold uppercase sponsor">
             TRUSTED BY 20,000+ ORGANIZATIONS WORLDWIDE
           </span>
