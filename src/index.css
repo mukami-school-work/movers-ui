@@ -52,3 +52,15 @@ ul {
 .quote {
   font-family: 'San Marino Beach', sans-serif;
 }
+
+input[type=file]::file-selector-button {
+  margin-right: 20px;
+  border: none;
+  background:#08cf65;
+  padding: 8px 16px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .2s ease-in-out;
+}

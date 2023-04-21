@@ -25,7 +25,7 @@ const Navbar = () => {
     };
   }, []);
 
-  if (location.pathname === "/login") {
+  if (location.pathname === "/login" || location.pathname === "/signup") {
     return null;
   }
 
@@ -66,7 +66,7 @@ const Navbar = () => {
                     href="#features"
                     aria-label="Services"
                     title="Services"
-                    className="text-sm tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                    className="text-sm tracking-wide text-gray-700 transition-colors duration-200 hover:cursor-pointer hover:text-deep-purple-accent-400"
                   >
                     Why Movers?
                   </a>
@@ -76,7 +76,7 @@ const Navbar = () => {
                     href="#testimonials"
                     aria-label="Testimonials"
                     title="Testimonials"
-                    className="text-sm tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                    className="text-sm tracking-wide text-gray-700 transition-colors duration-200 hover:cursor-pointer hover:text-deep-purple-accent-400"
                   >
                     Testimonials
                   </a>
@@ -87,7 +87,7 @@ const Navbar = () => {
                     href="#team"
                     aria-label="Team"
                     title="Team"
-                    className="text-sm tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                    className="text-sm tracking-wide text-gray-700 transition-colors duration-200 hover:cursor-pointer hover:text-deep-purple-accent-400"
                   >
                     Our Team
                   </a>
@@ -105,7 +105,7 @@ const Navbar = () => {
                     href="/login"
                     aria-label="Login"
                     title="Login"
-                    className="flex text-sm font-semibold tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                    className="flex text-sm font-semibold tracking-wide text-gray-700 transition-colors duration-200 hover:cursor-pointer hover:text-deep-purple-accent-400"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -127,7 +127,7 @@ const Navbar = () => {
                 <li>
                   <a
                     href="/signup"
-                    className="inline-flex items-center justify-center h-12 px-6 text-sm font-semibold tracking-wide text-white transition duration-200 rounded-lg shadow-md bg-primary-green hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                    className="inline-flex items-center justify-center h-12 px-6 text-sm font-semibold tracking-wide text-white transition duration-200 rounded-lg shadow-md hover:cursor-pointer bg-primary-green hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
                     aria-label="Create Account"
                     title="Create Account"
                   >
@@ -140,7 +140,7 @@ const Navbar = () => {
               <button
                 aria-label="Open Menu"
                 title="Open Menu"
-                className="p-2 -mr-1 transition duration-200 border-none rounded focus:outline-none focus:shadow-outline hover:bg-deep-purple-50 focus:bg-deep-purple-50 bg-primary-white"
+                className="p-2 -mr-1 transition duration-200 border-none rounded hover:cursor-pointer focus:outline-none focus:shadow-outline hover:bg-deep-purple-50 focus:bg-deep-purple-50 bg-primary-white"
                 onClick={() => setIsMenuOpen(true)}
               >
                 <svg
@@ -167,7 +167,7 @@ const Navbar = () => {
                           href="/"
                           aria-label="Logo"
                           title="Logo"
-                          className="inline-flex items-center"
+                          className="inline-flex items-center hover:cursor-pointer"
                         >
                           <svg
                             className="w-8 text-deep-purple-accent-400"
@@ -193,7 +193,7 @@ const Navbar = () => {
                         <button
                           aria-label="Close Menu"
                           title="Close Menu"
-                          className="p-2 -mt-2 -mr-2 transition duration-200 border-none rounded bg-primary-white hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                          className="p-2 -mt-2 -mr-2 transition duration-200 border-none rounded hover:cursor-pointer bg-primary-white hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                           onClick={() => setIsMenuOpen(false)}
                         >
                           <svg
@@ -215,7 +215,7 @@ const Navbar = () => {
                             href="#features"
                             aria-label="Services"
                             title="Services"
-                            className="text-sm tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                            className="text-sm tracking-wide text-gray-700 transition-colors duration-200 hover:cursor-pointer hover:text-deep-purple-accent-400"
                           >
                             Why Movers?
                           </a>
@@ -225,7 +225,7 @@ const Navbar = () => {
                             href="#testimonials"
                             aria-label="About Us"
                             title="About Us"
-                            className="text-sm tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                            className="text-sm tracking-wide text-gray-700 transition-colors duration-200 hover:cursor-pointer hover:text-deep-purple-accent-400"
                           >
                             Testimonials
                           </a>
@@ -235,7 +235,7 @@ const Navbar = () => {
                             href="#team"
                             aria-label="Team"
                             title="Team"
-                            className="text-sm tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                            className="text-sm tracking-wide text-gray-700 transition-colors duration-200 hover:cursor-pointer hover:text-deep-purple-accent-400"
                           >
                             Our Team
                           </a>
@@ -247,7 +247,7 @@ const Navbar = () => {
                                 href="/profile"
                                 aria-label="Edit Profile"
                                 title="Edit Profile"
-                                className="flex text-sm tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                className="flex text-sm tracking-wide text-gray-700 transition-colors duration-200 hover:cursor-pointer hover:text-deep-purple-accent-400"
                               >
                                 <svg
                                   xmlns="http://www.w3.org/2000/svg"
@@ -269,7 +269,7 @@ const Navbar = () => {
                             <li>
                               <a
                                 href="/logout"
-                                className="inline-flex items-center justify-center w-full h-12 px-6 text-sm tracking-wide text-white transition duration-200 rounded-lg shadow-md bg-primary-green hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                                className="inline-flex items-center justify-center w-full h-12 px-6 text-sm tracking-wide text-white transition duration-200 rounded-lg shadow-md bg-primary-green hover:bg-deep-purple-accent-700 hover:cursor-pointer focus:shadow-outline focus:outline-none"
                                 aria-label="Log Out"
                                 title="Log Out"
                               >
@@ -282,7 +282,7 @@ const Navbar = () => {
                             <li>
                               <a
                                 href="/signup"
-                                className="inline-flex items-center justify-center w-full h-12 px-6 text-sm tracking-wide text-white transition duration-200 rounded-lg shadow-md bg-primary-green hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                                className="inline-flex items-center justify-center w-full h-12 px-6 text-sm tracking-wide text-white transition duration-200 rounded-lg shadow-md bg-primary-green hover:bg-deep-purple-accent-700 hover:cursor-pointer focus:shadow-outline focus:outline-none"
                                 aria-label="Create Account"
                                 title="Create Account"
                               >
