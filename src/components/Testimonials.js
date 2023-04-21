@@ -1,6 +1,6 @@
 const Testimonials = () => {
   return (
-    <div class="relative overflow-hidden bg-white">
+    <section id="testimonials" class="relative overflow-hidden bg-white">
       <div class="max-w-[85rem] px-4 py-12 sm:px-6 lg:px-8 lg:py-16 mx-auto">
         {/* <!-- Gradients --> */}
         <div aria-hidden="true" class="flex absolute left-0 -z-[1]">
@@ -131,7 +131,7 @@ const Testimonials = () => {
         {/* <!-- End Grid --> */}
       </div>
       {/* <!-- End Testimonials --> */}
-    </div>
+    </section>
   );
 };
 

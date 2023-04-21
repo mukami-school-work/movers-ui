@@ -1,4 +1,11 @@
-import { Features, Footer, Hero, Team, Testimonials } from "components";
+import {
+  Features,
+  Footer,
+  Hero,
+  InfoCard,
+  Team,
+  Testimonials,
+} from "components";
 
 const Landing = () => {
   return (
@@ -6,6 +13,7 @@ const Landing = () => {
       <Hero />
       <Features />
       <Testimonials />
+      <InfoCard />
       <Team />
       <Footer />
     </>

@@ -1,5 +1,5 @@
 import { ProfileDropDown } from "components";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,7 +23,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="lg:max-w-screen-full bg-primary-white h-[80px]">
+      <div className="lg:max-w-screen-full bg-primary-white">
         <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-8 bg-primary-white">
           <div className="relative flex items-center justify-between">
             <div className="flex items-center">
@@ -55,7 +55,7 @@ const Navbar = () => {
               <ul className="flex items-center hidden space-x-8 font-semibold list-none lg:flex">
                 <li>
                   <a
-                    href="/"
+                    href="#features"
                     aria-label="Services"
                     title="Services"
                     className="text-sm tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -65,7 +65,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <a
-                    href="/"
+                    href="#testimonials"
                     aria-label="Testimonials"
                     title="Testimonials"
                     className="text-sm tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -76,12 +76,12 @@ const Navbar = () => {
 
                 <li>
                   <a
-                    href="/"
-                    aria-label="About us"
-                    title="About us"
+                    href="#team"
+                    aria-label="Team"
+                    title="Team"
                     className="text-sm tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                   >
-                    Support
+                    Our Team
                   </a>
                 </li>
               </ul>
@@ -94,7 +94,7 @@ const Navbar = () => {
               <ul className="flex items-center hidden space-x-8 lg:flex">
                 <li>
                   <a
-                    href="/"
+                    href="/login"
                     aria-label="Login"
                     title="Login"
                     className="flex text-sm font-semibold tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -118,7 +118,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <a
-                    href="/"
+                    href="/signup"
                     className="inline-flex items-center justify-center h-12 px-6 text-sm font-semibold tracking-wide text-white transition duration-200 rounded-lg shadow-md bg-primary-green hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
                     aria-label="Create Account"
                     title="Create Account"
@@ -204,7 +204,7 @@ const Navbar = () => {
                       <ul className="space-y-4 font-semibold">
                         <li>
                           <a
-                            href="/"
+                            href="#features"
                             aria-label="Services"
                             title="Services"
                             className="text-sm tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -214,7 +214,7 @@ const Navbar = () => {
                         </li>
                         <li>
                           <a
-                            href="/"
+                            href="#testimonials"
                             aria-label="About Us"
                             title="About Us"
                             className="text-sm tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -224,19 +224,19 @@ const Navbar = () => {
                         </li>
                         <li>
                           <a
-                            href="/"
-                            aria-label="Contact Us"
-                            title="Contact Us"
+                            href="#team"
+                            aria-label="Team"
+                            title="Team"
                             className="text-sm tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                           >
-                            Support
+                            Our Team
                           </a>
                         </li>
                         {isLogin ? (
                           <>
                             <li>
                               <a
-                                href="/"
+                                href="/profile"
                                 aria-label="Edit Profile"
                                 title="Edit Profile"
                                 className="flex text-sm tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -260,7 +260,7 @@ const Navbar = () => {
                             </li>
                             <li>
                               <a
-                                href="/"
+                                href="/logout"
                                 className="inline-flex items-center justify-center w-full h-12 px-6 text-sm tracking-wide text-white transition duration-200 rounded-lg shadow-md bg-primary-green hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
                                 aria-label="Log Out"
                                 title="Log Out"
@@ -273,7 +273,7 @@ const Navbar = () => {
                           <>
                             <li>
                               <a
-                                href="/"
+                                href="/signup"
                                 className="inline-flex items-center justify-center w-full h-12 px-6 text-sm tracking-wide text-white transition duration-200 rounded-lg shadow-md bg-primary-green hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
                                 aria-label="Create Account"
                                 title="Create Account"
