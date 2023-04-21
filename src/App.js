@@ -18,8 +18,8 @@ function App() {
   }).resize(fill().width(100).height(150));
   return (
     <>
-      <Navbar />
       <BrowserRouter>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Landing />} />
 
