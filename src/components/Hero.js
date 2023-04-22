@@ -12,7 +12,7 @@ export default function Hero() {
         id="hero"
         className="py-20 dark:bg-gray-800 bg-primary-white dark:text-gray-100"
       >
-        <div className="container flex flex-col justify-center p-6 mx-auto mt-16 sm:py-12 lg:py-16 lg:flex-row lg:justify-between">
+        <div className="container flex flex-col justify-center p-6 mx-auto mt-16 sm:py-12 lg:py-16 lg:flex-row lg:justify-evenly">
           {/* Banner CTA Section */}
           <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-2xl lg:text-left">
             <h1 className="text-5xl font-bold sm:text-6xl">
@@ -35,11 +35,11 @@ export default function Hero() {
             </div>
           </div>
           {/* Banner Image Section */}
-          <div className="flex items-center justify-center p-6 mt-12 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
+          <div className="flex items-center justify-center p-6 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
             <img
               src={hero}
               alt=""
-              className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128"
+              className="object-contain h-96 w-96 sm:h-80 lg:h-96 xl:h-112 2xl:h-128"
             />
           </div>
         </div>
