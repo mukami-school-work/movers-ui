@@ -1,10 +1,7 @@
 import useAuth from "auth/useAuth";
 import { useState } from "react";
 
-export default function Login({ localhost, server }) {
-  // const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState("");
-  // const [errors, setErrors] = useState([]);
+export default function Login() {
   const [passwordVisible, setPasswordVisible] = useState(false);
   const { login, errors, isLogin, navigate } = useAuth();
 
@@ -18,7 +15,7 @@ export default function Login({ localhost, server }) {
     const formData = new FormData(e.target);
     const email = formData.get("email");
     const password = formData.get("password");
-    login(email, password, localhost, server);
+    login(email, password);
   };
 
   return (

@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function useAuth() {
   const [user, setUser] = useState(null);
@@ -13,7 +13,7 @@ export default function useAuth() {
 
   const login = async (email, password) => {
     try {
-      const resp = await axios.post(`${localhost}/login`, {
+      const resp = await axios.post(`${server}/login`, {
         email: email,
         password: password,
       });
@@ -41,7 +41,7 @@ export default function useAuth() {
       if (token) {
         try {
           // Send a GET request to your backend endpoint to check for authentication
-          const resp = await axios.get(`${localhost}/profile`, {
+          const resp = await axios.get(`${server}/profile`, {
             headers: {
               Authorization: `${token}`,
             },
@@ -60,6 +60,7 @@ export default function useAuth() {
 
   return {
     user,
+    setUser,
     login,
     logout,
     errors,

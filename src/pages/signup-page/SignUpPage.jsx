@@ -1,8 +1,14 @@
+import useAuth from "auth/useAuth";
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function Signup({ server, localhost, setUserData }) {
+export default function Signup() {
+  const { setUser } = useAuth();
+  const [localhost, server] = [
+    "http://localhost:4000",
+    "https://rails-lszl.onrender.com",
+  ];
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -79,10 +85,10 @@ export default function Signup({ server, localhost, setUserData }) {
           image: response.data.secure_url,
         };
         axios
-          .post(`${localhost}/users`, railsData)
+          .post(`${server}/users`, railsData)
           .then((response) => {
             console.log(response.data);
-            setUserData(response.data.user);
+            setUser(response.data.user);
             localStorage.setItem("jwt", response.data.jwt);
             navigate("/");
             window.location.reload();
