@@ -15,7 +15,7 @@ function Card() {
             <div className="flex items-center justify-between">
               <a
                 href="#"
-                className="px-4 py-2 bg-green-600 text-white font-bold rounded-full no-underline transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-green-700  duration-300"
+                className="px-4 py-2 bg-primary-green text-white font-bold rounded-full no-underline transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-green-700  duration-300"
               >
                 Book Now
               </a>
