@@ -1,26 +1,47 @@
-import { useState } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-export default function Login() {
+export default function Login({ setUserData, localhost, server }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [errors, setErrors] = useState([]);
   const [passwordVisible, setPasswordVisible] = useState(false);
+  const [showAlert, setShowAlert] = useState(true);
 
-  const togglePasswordVisibility = () => {
-    setPasswordVisible(!passwordVisible);
-  };
+  const navigate = useNavigate();
 
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-  };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Email:", email);
-    console.log("Password:", password);
+
+    //Validate the form data
+    if (!/^\S+@\S+\.\S+$/.test(email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+    if (password.trim() === "") {
+      alert("Please enter a password.");
+      return;
+    }
+
+    //Upload the details to the backend
+    const formData = new FormData();
+    formData.append("email", email);
+    formData.append("password", password);
+
+    try {
+      const resp = await axios.post(`${localhost}/login`, formData);
+      console.log({ resp });
+      setUserData(resp.data.user);
+      localStorage.setItem("jwt", resp.data.jwt);
+      navigate("/");
+    } catch (error) {
+      console.log(error);
+      setErrors((prev) => [...prev, error.response.data.error]);
+      setTimeout(() => {
+        setErrors([]);
+      }, 5000);
+    }
   };
 
   return (
@@ -36,7 +57,6 @@ export default function Login() {
                 Sign in.
               </h2>
             </div>
-
             <div className="mt-8">
               <div className="mt-6">
                 <form action="#" onSubmit={handleSubmit} className="space-y-6">
@@ -55,7 +75,7 @@ export default function Login() {
                         name="email"
                         type="email"
                         autoComplete="email"
-                        onChange={handleEmailChange}
+                        onChange={(e) => setEmail(e.target.value)}
                         required=""
                         placeholder="Your Email"
                         className="block w-full px-5 py-3 text-base placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg text-neutral-600 bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300"
@@ -77,14 +97,14 @@ export default function Login() {
                         id="password"
                         name="password"
                         type={passwordVisible ? "text" : "password"}
-                        onChange={handlePasswordChange}
+                        onChange={(e) => setPassword(e.target.value)}
                         autoComplete="current-password"
                         required=""
                         placeholder="Your Password"
                         className="block w-full px-5 py-3 text-base placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-s-lg text-neutral-600 bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300"
                       />
                       <button
-                        onClick={togglePasswordVisibility}
+                        onClick={() => setPasswordVisible(!passwordVisible)}
                         className="px-4 transition duration-500 ease-in-out transform border-none bg-gray-50 rounded-e-lg hover:cursor-pointer hover:bg-gray-100"
                       >
                         {passwordVisible ? (
@@ -126,18 +146,30 @@ export default function Login() {
                       </button>
                     </div>
                   </div>
-
-                  <div className="flex items-center justify-between">
-                    <div className="text-sm">
-                      <a
-                        href="/login"
-                        className="font-medium text-primary-green hover:text-green-500"
+                  {errors.length > 0 &&
+                    errors.map((error, index) => (
+                      <div
+                        key={index}
+                        className="px-4 py-3 text-teal-900 transition duration-500 ease-in-out transform bg-teal-100 border-t-4 border-teal-500 rounded shadow-md"
+                        role="alert"
                       >
-                        {" "}
-                        Forgot your password?{" "}
-                      </a>
-                    </div>
-                  </div>
+                        <div className="flex">
+                          <div className="py-1">
+                            <svg
+                              className="w-6 h-6 mr-4 text-teal-500 fill-current"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 20 20"
+                            >
+                              <path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z" />
+                            </svg>
+                          </div>
+                          <div>
+                            <p className="font-bold">Error!</p>
+                            <p className="text-sm">{error}</p>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
 
                   <div>
                     <button

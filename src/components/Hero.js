@@ -45,14 +45,14 @@ export default function Hero() {
         </div>
 
         {/* Trusted Companies Section */}
-        <div class="px-4 mt-18 mx-auto text-center md:max-w-screen-md lg:max-w-screen-2xl lg:px-36">
-          <div class="font-semibold mb-12 text-xs uppercase sponsor leading-8">
+        <div className="px-4 mx-auto text-center mt-18 md:max-w-screen-md lg:max-w-screen-2xl lg:px-36">
+          <div className="mb-12 text-xs font-semibold leading-8 uppercase sponsor">
             TRUSTED BY 20,000+ ORGANIZATIONS WORLDWIDE
           </div>
-          <div class="flex flex-wrap justify-center items-center text-gray-500 sm:justify-between">
+          <div className="flex flex-wrap items-center justify-center text-gray-500 sm:justify-between">
             <a
               href="/"
-              class="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400"
+              className="mb-5 mr-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400"
             >
               <img
                 src={shift}
@@ -62,7 +62,7 @@ export default function Hero() {
             </a>
             <a
               href="/"
-              class="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400"
+              className="mb-5 mr-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400"
             >
               <img
                 src={allied}
@@ -72,7 +72,7 @@ export default function Hero() {
             </a>
             <a
               href="/"
-              class="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400"
+              className="mb-5 mr-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400"
             >
               <img
                 className="transition-all cursor-pointer duration-400 filter grayscale hover:grayscale-0"
@@ -82,7 +82,7 @@ export default function Hero() {
             </a>
             <a
               href="/"
-              class="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400"
+              className="mb-5 mr-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400"
             >
               <img
                 src={may}
@@ -92,7 +92,7 @@ export default function Hero() {
             </a>
             <a
               href="/"
-              class="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400"
+              className="mb-5 mr-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400"
             >
               <img
                 src={bekins}
