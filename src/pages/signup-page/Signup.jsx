@@ -1,262 +1,8 @@
-// import { EyeIcon, EyeOffIcon } from "@heroicons/react/outline";
-// import {
-//   KeyIcon,
-//   MailIcon,
-//   PhoneIcon,
-//   PhotographIcon,
-//   UserIcon,
-// } from "@heroicons/react/solid";
-// import { useState } from "react";
-// import { useForm } from "react-hook-form";
-
-// function Signup() {
-//   const [showPassword, setShowPassword] = useState(false);
-//   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-//   const [emailError, setEmailError] = useState("");
-//   const [passwordError, setPasswordError] = useState("");
-//   const {
-//     register,
-//     handleSubmit,
-//     watch,
-//     formState: { errors },
-//   } = useForm({ mode: "onBlur" });
-
-//   const onSubmit = (data) => {
-//     console.log(data);
-//   };
-//   const handleEmailChange = (e) => {
-//     const validEmailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-//     if (!validEmailRegex.test(e.target.value)) {
-//       setEmailError("Invalid email address");
-//     } else {
-//       setEmailError("");
-//     }
-//   };
-
-//   const handlePasswordChange = (e) => {
-//     const { value } = e.target;
-//     if (value.length < 8) {
-//       setPasswordError("Password must be at least 8 characters long");
-//     } else {
-//       setPasswordError("");
-//     }
-//   };
-
-//   const handleShowPassword = () => {
-//     setShowPassword(!showPassword);
-//   };
-
-//   const handleShowConfirmPassword = () => {
-//     setShowConfirmPassword(!showConfirmPassword);
-//   };
-
-//   return (
-//     <div className="flex items-center justify-center w-full h-screen">
-//       <div className="flex flex-col w-full mx-auto bg-white rounded-lg shadow-md lg:flex-row">
-//         <div className="w-full p-10 lg:w-1/2">
-//           <img
-//             src="/login.jpg"
-//             alt="Sign Up"
-//             className="object-cover w-full h-full rounded-lg"
-//           />
-//         </div>
-
-//         <div className="flex flex-col items-center justify-center px-4 py-8 md:w-1/2">
-//           <h1 className="mb-4 text-3xl font-bold text-green-800">Sign Up</h1>
-//           <form
-//             onSubmit={handleSubmit(onSubmit)}
-//             className="flex flex-col w-full"
-//           >
-//             <div className="relative mb-4">
-//               <label htmlFor="name" className="sr-only">
-//                 Fullname
-//               </label>
-//               <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-//                 <UserIcon className="w-5 h-5 text-green-800" />
-//               </div>
-//               <input
-//                 type="text"
-//                 name="name"
-//                 id="name"
-//                 placeholder="Fullname"
-//                 className={`block w-full py-3 px-4 pl-10 focus:outline-none focus:bg-green-50 focus:placeholder-transparent border-b-4 border-green-200 transition duration-200 ${
-//                   errors.name ? "border-red-500" : ""
-//                 }`}
-//                 {...register("name", { required: true })}
-//               />
-//               {errors.name && (
-//                 <span className="absolute text-sm text-red-500 transform -translate-y-1/2 right-3 top-1/2">
-//                   Name is required
-//                 </span>
-//               )}
-//             </div>
-//             <div className="relative mb-4">
-//               <label htmlFor="name" className="sr-only">
-//                 Image
-//               </label>
-//               <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-//                 <PhotographIcon className="w-5 h-5 text-green-800" />
-//               </div>
-//               <input
-//                 type="url"
-//                 name="image-url"
-//                 id="image-url"
-//                 placeholder="Image URL"
-//                 className="block w-full px-4 py-3 pl-10 transition duration-200 border-b-4 border-green-200 focus:outline-none focus:bg-green-50 focus:placeholder-transparent"
-//               />
-//             </div>
-//             <div className="relative mb-4">
-//               <label htmlFor="email" className="sr-only">
-//                 Email
-//               </label>
-//               <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-//                 <MailIcon className="w-5 h-5 text-green-800" />
-//               </div>
-//               <input
-//                 type="email"
-//                 name="email"
-//                 id="email"
-//                 placeholder="Email"
-//                 className={`block w-full py-3 px-4 pl-10 focus:outline-none focus:bg-green-50 focus:placeholder-transparent border-b-4 border-green-200 transition duration-200 ${
-//                   errors.email || emailError ? "border-red-500" : ""
-//                 }`}
-//                 {...register("email", { required: true })}
-//                 onChange={handleEmailChange}
-//               />
-//               {errors.email && errors.email.type === "required" && (
-//                 <span className="absolute text-sm text-red-500 transform -translate-y-1/2 right-3 top-1/2">
-//                   Email is required
-//                 </span>
-//               )}
-//               {emailError && (
-//                 <span className="absolute text-sm text-red-500 transform -translate-y-1/2 right-3 top-1/2">
-//                   {emailError}
-//                 </span>
-//               )}
-//             </div>
-//             <div className="relative mb-4">
-//               <label htmlFor="phone" className="sr-only">
-//                 Phone
-//               </label>
-//               <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-//                 <PhoneIcon className="w-5 h-5 text-green-800" />
-//               </div>
-//               <input
-//                 type="text"
-//                 name="phone"
-//                 id="phone"
-//                 placeholder="Phone"
-//                 className={`block w-full py-3 px-4 pl-10 focus:outline-none focus:bg-green-50 focus:placeholder-transparent border-b-4 border-green-200 transition duration-200 ${
-//                   errors.phone ? "border-red-500" : ""
-//                 }`}
-//                 {...register("phone", { required: true })}
-//               />
-//               {errors.phone && (
-//                 <span className="absolute text-sm text-red-500 transform -translate-y-1/2 right-3 top-1/2">
-//                   Phone is required
-//                 </span>
-//               )}
-//             </div>
-//             <div className="relative mb-4">
-//               <label htmlFor="password" className="sr-only">
-//                 Password
-//               </label>
-//               <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-//                 <KeyIcon className="w-5 h-5 text-green-800" />
-//               </div>
-//               <input
-//                 type={showPassword ? "text" : "password"}
-//                 name="password"
-//                 id="password"
-//                 placeholder="Password"
-//                 className={`block w-full py-3 px-4 pl-10 focus:outline-none focus:bg-green-50 focus:placeholder-transparent border-b-4 border-green-200 transition duration-200 ${
-//                   errors.password || passwordError ? "border-red-500" : ""
-//                 }`}
-//                 {...register("password", { required: true })}
-//                 onChange={handlePasswordChange}
-//               />
-//               <div className="absolute inset-y-0 right-0 flex items-center pr-3">
-//                 {showPassword ? (
-//                   <EyeOffIcon
-//                     className="w-5 h-5 cursor-pointer text-black-600"
-//                     onClick={handleShowPassword}
-//                   />
-//                 ) : (
-//                   <EyeIcon
-//                     className="w-5 h-5 cursor-pointer text-black-600"
-//                     onClick={handleShowPassword}
-//                   />
-//                 )}
-//               </div>
-//               {errors.password && (
-//                 <span className="absolute text-sm text-red-500 transform -translate-y-1/2 right-3 top-1/2">
-//                   Password is required
-//                 </span>
-//               )}
-//               {passwordError && (
-//                 <span className="absolute text-sm text-red-500 transform -translate-y-1/2 right-3 top-1/2">
-//                   {passwordError}
-//                 </span>
-//               )}
-//             </div>
-//             <div className="relative mb-4">
-//               <label htmlFor="confirmPassword" className="sr-only">
-//                 Confirm Password
-//               </label>
-//               <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-//                 <KeyIcon className="w-5 h-5 text-green-800" />
-//               </div>
-//               <input
-//                 type={showConfirmPassword ? "text" : "password"}
-//                 name="confirmPassword"
-//                 id="confirmPassword"
-//                 placeholder="Confirm Password"
-//                 className={`block w-full py-3 px-4 pl-10 focus:outline-none focus:bg-green-50 focus:placeholder-transparent border-green-200 transition duration-200 ${
-//                   errors.confirmPassword ? "border-red-500" : ""
-//                 }`}
-//                 {...register("confirmPassword", {
-//                   required: true,
-//                   validate: (value) => value === watch("password"),
-//                 })}
-//               />
-//               <div className="absolute inset-y-0 right-0 flex items-center pr-3">
-//                 {showConfirmPassword ? (
-//                   <EyeOffIcon
-//                     className="w-5 h-5 cursor-pointer text-black-600"
-//                     onClick={handleShowConfirmPassword}
-//                   />
-//                 ) : (
-//                   <EyeIcon
-//                     className="w-5 h-5 cursor-pointer text-black-600"
-//                     onClick={handleShowConfirmPassword}
-//                   />
-//                 )}
-//               </div>
-//               {errors.confirmPassword && (
-//                 <span className="absolute text-sm text-red-500 transform -translate-y-1/2 right-3 top-1/2">
-//                   Passwords do not match
-//                 </span>
-//               )}
-//             </div>
-//             <button
-//               type="submit"
-//               className="py-3 text-lg font-bold text-white transition duration-200 bg-green-500 rounded-lg hover:bg-green-600"
-//             >
-//               Sign Up
-//             </button>
-//           </form>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Signup;
-
 import axios from "axios";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-export default function Signup() {
+export default function Signup({ server, localhost, setUserData }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -264,6 +10,8 @@ export default function Signup() {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [profilePicture, setProfilePicture] = useState(null);
   const [passwordVisible, setPasswordVisible] = useState(false);
+  const [errors, setErrors] = useState([]);
+  const navigate = useNavigate();
 
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
@@ -295,19 +43,11 @@ export default function Signup() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Name:", name);
-    console.log("Email:", email);
-    console.log("Password:", password);
-    console.log("ConfirmPassword:", confirmPassword);
-    console.log("PhoneNumber:", phoneNumber);
-    console.log("ProfilePicture:", profilePicture);
-
     // Validate the form data
     if (!/^\S+@\S+\.\S+$/.test(email)) {
       alert("Please enter a valid email address.");
       return;
     }
-
     if (password !== confirmPassword) {
       alert("Passwords do not match.");
       return;
@@ -324,33 +64,39 @@ export default function Signup() {
     // Upload the profile picture to Cloudinary
     const formData = new FormData();
     formData.append("file", profilePicture);
-    formData.append("upload_preset", "your_cloudinary_upload_preset_here");
+    formData.append("upload_preset", "bfnewdcr");
     axios
-      .post(
-        "https://api.cloudinary.com/v1_1/your_cloud_name_here/image/upload",
-        formData
-      )
+      .post("https://api.cloudinary.com/v1_1/dtyavz3qy/image/upload", formData)
       .then((response) => {
+        console.log(response.data.secure_url);
         // Send the form data to the backend with the Cloudinary URL
-        const userData = {
+        const railsData = {
           name: name,
           email: email,
           password: password,
-          confirm_password: confirmPassword,
-          phone_number: phoneNumber,
-          profile_picture_url: response.data.secure_url,
+          password_confirmation: confirmPassword,
+          phone: phoneNumber,
+          image: response.data.secure_url,
         };
         axios
-          .post("https://your_rails_backend_url_here/users", userData)
+          .post(`${localhost}/users`, railsData)
           .then((response) => {
-            console.log(response.data); // Handle the response here
+            console.log(response.data);
+            setUserData(response.data.user);
+            localStorage.setItem("jwt", response.data.jwt);
+            navigate("/");
+            window.location.reload();
           })
           .catch((error) => {
-            console.log(error); // Handle the error here
+            console.log(error);
+            setErrors((prev) => [...prev, error.response.data.error]);
+            setTimeout(() => {
+              setErrors([]);
+            }, 5000);
           });
       })
       .catch((error) => {
-        console.log(error); // Handle the error here
+        console.log(error);
       });
   };
 
@@ -488,9 +234,9 @@ export default function Signup() {
                           placeholder="Confirm Your Password"
                           className="block w-full px-5 py-3 mr-1 text-base placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg text-neutral-600 bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300"
                         />
-                        <button
+                        <div
                           onClick={togglePasswordVisibility}
-                          className="px-4 transition duration-500 ease-in-out transform border-none rounded-lg bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300 hover:cursor-pointer hover:bg-gray-100"
+                          className="flex items-center px-4 transition duration-500 ease-in-out transform border-none rounded-lg bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300 hover:cursor-pointer hover:bg-gray-100"
                         >
                           {passwordVisible ? (
                             <svg
@@ -528,7 +274,7 @@ export default function Signup() {
                               />
                             </svg>
                           )}
-                        </button>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -554,6 +300,31 @@ export default function Signup() {
                       />
                     </div>
                   </div>
+                  {/* Show errors here if any */}
+                  {errors.length > 0 &&
+                    errors.map((error, index) => (
+                      <div
+                        key={index}
+                        className="px-4 py-3 text-teal-900 transition duration-500 ease-in-out transform bg-teal-100 border-t-4 border-teal-500 rounded shadow-md"
+                        role="alert"
+                      >
+                        <div className="flex">
+                          <div className="py-1">
+                            <svg
+                              className="w-6 h-6 mr-4 text-teal-500 fill-current"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 20 20"
+                            >
+                              <path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z" />
+                            </svg>
+                          </div>
+                          <div>
+                            <p className="font-bold">Error!</p>
+                            <p className="text-sm">{error}</p>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
 
                   {/* Create Account Button */}
                   <div>

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Login({ setUserData, localhost, server }) {
@@ -7,7 +7,6 @@ export default function Login({ setUserData, localhost, server }) {
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState([]);
   const [passwordVisible, setPasswordVisible] = useState(false);
-  const [showAlert, setShowAlert] = useState(true);
 
   const navigate = useNavigate();
 
@@ -35,6 +34,7 @@ export default function Login({ setUserData, localhost, server }) {
       setUserData(resp.data.user);
       localStorage.setItem("jwt", resp.data.jwt);
       navigate("/");
+      window.location.reload();
     } catch (error) {
       console.log(error);
       setErrors((prev) => [...prev, error.response.data.error]);
@@ -103,9 +103,9 @@ export default function Login({ setUserData, localhost, server }) {
                         placeholder="Your Password"
                         className="block w-full px-5 py-3 text-base placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-s-lg text-neutral-600 bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300"
                       />
-                      <button
+                      <div
                         onClick={() => setPasswordVisible(!passwordVisible)}
-                        className="px-4 transition duration-500 ease-in-out transform border-none bg-gray-50 rounded-e-lg hover:cursor-pointer hover:bg-gray-100"
+                        className="flex items-center px-4 transition duration-500 ease-in-out transform border-none bg-gray-50 rounded-e-lg hover:cursor-pointer hover:bg-gray-100"
                       >
                         {passwordVisible ? (
                           <svg
@@ -143,7 +143,7 @@ export default function Login({ setUserData, localhost, server }) {
                             />
                           </svg>
                         )}
-                      </button>
+                      </div>
                     </div>
                   </div>
                   {errors.length > 0 &&

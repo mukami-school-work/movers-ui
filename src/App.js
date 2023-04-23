@@ -4,7 +4,7 @@ import Profile from "pages/profile-page/Profile";
 import Reviews from "pages/reviews-page/Reviews";
 import Search from "pages/search-page/Search";
 import { useEffect, useState } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import BoxesRange from "./pages/boxes-page/BoxesRange";
 import ListingsPage from "./pages/listings page/ListingsPage";
@@ -37,12 +37,14 @@ function App() {
     fetchProfile();
   }, []);
 
+  function refreshPage() {}
+
   return (
     <>
       <BrowserRouter>
-        <Navbar isLogin={isLogin} />
+        <Navbar isLogin={isLogin} user={userData} />
         <Routes>
-          <Route path="/" element={<Landing />} />
+          <Route path="/" element={<Landing isLogin={isLogin} />} />
           <Route
             path="/login"
             element={
@@ -53,7 +55,16 @@ function App() {
               />
             }
           />
-          <Route path="/signup" element={<Signup />} />
+          <Route
+            path="/signup"
+            element={
+              <Signup
+                localhost={localhost}
+                server={server}
+                setUserData={setUserData}
+              />
+            }
+          />
           <Route path="/movers" element={<ListingsPage />} />
           <Route path="/boxes" element={<BoxesRange />} />
           <Route path="/search" element={<Search />} />

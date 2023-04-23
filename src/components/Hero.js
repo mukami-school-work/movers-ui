@@ -5,7 +5,7 @@ import jk from "../assets/jk.svg";
 import may from "../assets/may.svg";
 import shift from "../assets/shift.svg";
 
-export default function Hero() {
+export default function Hero({ isLogin }) {
   return (
     <>
       <section
@@ -25,13 +25,22 @@ export default function Hero() {
               linking you to the best moving companies at affordable rates.
             </p>
             <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-              <a
-                rel="noopener noreferrer"
-                href="/signup"
-                className="inline-flex items-center justify-center h-12 px-12 font-semibold tracking-wide text-white transition duration-200 rounded-lg shadow-md py-7 dark:bg-violet-400 dark:text-gray-900 bg-primary-green hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-              >
-                Get Started
-              </a>
+              {console.log({ isLogin })}
+              {isLogin ? (
+                <a
+                  href="/location"
+                  className="inline-flex items-center justify-center h-12 px-12 font-semibold tracking-wide transition duration-200 rounded-lg shadow-md text-primary-green py-7 dark:bg-violet-400 dark:text-gray-900 bg-black-800 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                >
+                  Get Quote
+                </a>
+              ) : (
+                <a
+                  href="/signup"
+                  className="inline-flex items-center justify-center h-12 px-12 font-semibold tracking-wide text-white transition duration-200 rounded-lg shadow-md py-7 dark:bg-violet-400 dark:text-gray-900 bg-primary-green hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                >
+                  Get Started
+                </a>
+              )}
             </div>
           </div>
           {/* Banner Image Section */}

@@ -7,10 +7,10 @@ import {
   Testimonials,
 } from "components";
 
-const Landing = () => {
+const Landing = ({ isLogin }) => {
   return (
     <>
-      <Hero />
+      <Hero isLogin={isLogin} />
       <Features />
       <InfoCard />
       <Testimonials />
