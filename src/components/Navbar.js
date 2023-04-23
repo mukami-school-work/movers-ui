@@ -2,7 +2,7 @@ import { NavExRootPath, NavRootPath } from "components";
 import { useEffect } from "react";
 import { useLocation } from "react-router";
 
-const Navbar = ({ isLogin }) => {
+const Navbar = ({ isLogin, logout }) => {
   const location = useLocation();
 
   useEffect(() => {
@@ -26,9 +26,9 @@ const Navbar = ({ isLogin }) => {
   if (location.pathname === "/login" || location.pathname === "/signup") {
     return null;
   } else if (location.pathname === "/") {
-    return <NavRootPath isLogin={isLogin} />;
+    return <NavRootPath isLogin={isLogin} logout={logout} />;
   } else {
-    return <NavExRootPath isLogin={isLogin} />;
+    return <NavExRootPath isLogin={isLogin} logout={logout} />;
   }
 };
 

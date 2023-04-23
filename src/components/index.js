@@ -5,6 +5,7 @@ import ProfileDropDown from "components/ProfileDropDown";
 import Footer from "./Footer";
 import InfoCard from "./InfoCard";
 import { NavExRootPath, NavRootPath } from "./NavPath";
+import PrivateRoute from "./PrivateRoute";
 import Team from "./Team";
 import Testimonials from "./Testimonials";
 export {
@@ -18,5 +19,6 @@ export {
   Team,
   Footer,
   InfoCard,
+  PrivateRoute,
 };
 

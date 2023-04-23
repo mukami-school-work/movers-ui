@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function NavExRootPath({ isLogin }) {
+function NavExRootPath({ logout }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -172,9 +172,7 @@ function NavExRootPath({ isLogin }) {
                       <li>
                         <a
                           href="/"
-                          onClick={() => {
-                            localStorage.removeItem("jwt");
-                          }}
+                          onClick={() => logout()}
                           className="inline-flex items-center justify-center w-full h-12 px-6 text-sm tracking-wide text-white transition duration-200 rounded-lg shadow-md bg-primary-green hover:bg-deep-purple-accent-700 hover:cursor-pointer focus:shadow-outline focus:outline-none"
                           aria-label="Log Out"
                           title="Log Out"
@@ -194,7 +192,7 @@ function NavExRootPath({ isLogin }) {
   );
 }
 
-function NavRootPath({ isLogin }) {
+function NavRootPath({ isLogin, logout }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <div className="lg:max-w-screen-full navbar bg-primary-white">
@@ -290,9 +288,7 @@ function NavRootPath({ isLogin }) {
               <li>
                 <a
                   href="/"
-                  onClick={() => {
-                    localStorage.removeItem("jwt");
-                  }}
+                  onClick={() => logout()}
                   className="inline-flex items-center justify-center w-full h-12 px-6 text-sm tracking-wide text-white transition duration-200 rounded-lg shadow-md bg-primary-green hover:bg-deep-purple-accent-700 hover:cursor-pointer focus:shadow-outline focus:outline-none"
                   aria-label="Log Out"
                   title="Log Out"
@@ -532,3 +528,4 @@ function NavRootPath({ isLogin }) {
 }
 
 export { NavExRootPath, NavRootPath };
+

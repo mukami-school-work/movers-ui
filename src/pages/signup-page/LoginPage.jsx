@@ -1,47 +1,24 @@
-import axios from "axios";
+import useAuth from "auth/useAuth";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 
-export default function Login({ setUserData, localhost, server }) {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [errors, setErrors] = useState([]);
+export default function Login({ localhost, server }) {
+  // const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState("");
+  // const [errors, setErrors] = useState([]);
   const [passwordVisible, setPasswordVisible] = useState(false);
+  const { login, errors, isLogin, navigate } = useAuth();
 
-  const navigate = useNavigate();
-
+  if (isLogin) {
+    navigate("/");
+    window.location.reload();
+  }
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    //Validate the form data
-    if (!/^\S+@\S+\.\S+$/.test(email)) {
-      alert("Please enter a valid email address.");
-      return;
-    }
-    if (password.trim() === "") {
-      alert("Please enter a password.");
-      return;
-    }
-
-    //Upload the details to the backend
-    const formData = new FormData();
-    formData.append("email", email);
-    formData.append("password", password);
-
-    try {
-      const resp = await axios.post(`${localhost}/login`, formData);
-      console.log({ resp });
-      setUserData(resp.data.user);
-      localStorage.setItem("jwt", resp.data.jwt);
-      navigate("/");
-      window.location.reload();
-    } catch (error) {
-      console.log(error);
-      setErrors((prev) => [...prev, error.response.data.error]);
-      setTimeout(() => {
-        setErrors([]);
-      }, 5000);
-    }
+    //send the details to the backend
+    const formData = new FormData(e.target);
+    const email = formData.get("email");
+    const password = formData.get("password");
+    login(email, password, localhost, server);
   };
 
   return (
@@ -75,7 +52,7 @@ export default function Login({ setUserData, localhost, server }) {
                         name="email"
                         type="email"
                         autoComplete="email"
-                        onChange={(e) => setEmail(e.target.value)}
+                        // onChange={(e) => setEmail(e.target.value)}
                         required=""
                         placeholder="Your Email"
                         className="block w-full px-5 py-3 text-base placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg text-neutral-600 bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300"
@@ -97,7 +74,7 @@ export default function Login({ setUserData, localhost, server }) {
                         id="password"
                         name="password"
                         type={passwordVisible ? "text" : "password"}
-                        onChange={(e) => setPassword(e.target.value)}
+                        // onChange={(e) => setPassword(e.target.value)}
                         autoComplete="current-password"
                         required=""
                         placeholder="Your Password"

@@ -25,7 +25,6 @@ export default function Hero({ isLogin }) {
               linking you to the best moving companies at affordable rates.
             </p>
             <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-              {console.log({ isLogin })}
               {isLogin ? (
                 <a
                   href="/location"
