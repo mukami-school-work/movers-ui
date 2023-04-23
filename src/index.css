@@ -15,9 +15,6 @@
   font-family: Montserrat, Poppins, sans-serif;
 }
 
-/* body {
-  background-color: #ebf5f3;
-} */
 
 .cta-title {
   font-family: "Estellothy";
@@ -27,14 +24,8 @@
 
 .sponsor {
   font-size: 20px;
-  /* margin-bottom: -8px; */
   color: rgb(167, 167, 167);
 }
-/* 
-.sponsor.child {
-  font-size: 14px;
-  color: rgb(167, 167, 167);
-} */
 
 .c-card:hover img {
   transition: transform 0.3s ease-in-out;
@@ -54,11 +45,22 @@ ul {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #fff;
   z-index: 100;
   transition: all 0.3s ease-in-out;
 }
 
 .quote {
   font-family: 'San Marino Beach', sans-serif;
+}
+
+input[type=file]::file-selector-button {
+  margin-right: 20px;
+  border: none;
+  background:#08cf65;
+  padding: 8px 16px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .2s ease-in-out;
 }
