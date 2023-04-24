@@ -33,6 +33,7 @@ export default function useAuth() {
 
     localStorage.removeItem("jwt");
     setUser(null);
+    window.location.reload();
   };
 
   useEffect(() => {
