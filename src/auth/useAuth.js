@@ -32,7 +32,7 @@ export default function useAuth() {
   const logout = () => {
 
     localStorage.removeItem("jwt");
-    setUser(null);
+
     window.location.reload();
   };
 
