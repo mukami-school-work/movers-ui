@@ -1,31 +1,64 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 import { ArrowRightIcon, SearchIcon } from "@heroicons/react/outline";
 
-function Search() {
-  const [searchQuery, setSearchQuery] = useState("");
+import Inventories from "./components/Inventories";
+import Pagination from "./components/Pagination";
+// import "./styles.css";
+
+const Search = () => {
+  const [inventories, setInventories] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [inventoriesPerPage, setInventoriesPerPage] = useState(10);
+  const [filterinventory, setFilterinventory] = useState([]);
   const [cartItems, setCartItems] = useState([]);
   const [cartVisible, setCartVisible] = useState(false);
-  const [inventory, setInventory] = useState([]);
-  const [filterinventory, setFilterinventory] = useState([]);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:4000/inventories")
-      .then((res) => res.json())
-      .then((inventory) => {
-        console.log(inventory);
-        setInventory(inventory);
-        setFilterinventory(inventory);
-      }
-      )
-      .catch((err) => console.log(err));
+    const fetchInventories = async () => {
+      setLoading(true);
+      const res = await axios.get("http://127.0.0.1:4000/inventories");
+      console.log(res.data);
+      setInventories(res.data);
+      setFilterinventory(res.data);
+      setLoading(false);
+    };
+
+    fetchInventories();
   }, []);
 
   const handleFilter = (value) => {
     const res = filterinventory.filter((f) =>
       f.name.toLowerCase().includes(value.toLowerCase())
     );
-    setInventory(res);
+    setInventories(res);
   };
+
+  // Get current inventories
+  const indexOfLastPost = currentPage * inventoriesPerPage;
+  const indexOfFirstPost = indexOfLastPost - inventoriesPerPage;
+  const currentInventories = inventories.slice(
+    indexOfFirstPost,
+    indexOfLastPost
+  );
+
+  // Change page
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+  //   return (
+  //     <div className="container mt-5">
+  //       <h1 className="text-primary mb-3">Pagination App</h1>
+  //       <Inventories inventories={currentInventories} loading={loading} />
+  //       <Pagination
+  //         currentPage={currentPage}
+  //         inventoriesPerPage={inventoriesPerPage}
+  //         totalInventories={inventories.length}
+  //         paginate={paginate}
+  //       />
+  //     </div>
+  //   );
+  // };
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -86,7 +119,7 @@ function Search() {
       </nav>
 
       {/* Main Content */}
-      <div className="max-w-4xl mx-auto mt-16 px-8 py-16 flex flex-col items-center">
+      <div className="max-w-4xl mx-auto mt-8 px-8 py-16 flex flex-col items-center">
         <h1 className="text-4xl text-primary-green text-center mb-6">
           What would you like to move?
         </h1>
@@ -111,11 +144,18 @@ function Search() {
             </button>
           </div>
         </form>
-        <div className="text-gray-500 p-6 font-bold">
+        <Inventories inventories={currentInventories} loading={loading} />
+        <Pagination
+          currentPage={currentPage}
+          inventoriesPerPage={inventoriesPerPage}
+          totalInventories={inventories.length}
+          paginate={paginate}
+        />
+        {/* <div className="text-gray-500 p-6 font-bold">
           {inventory.map((d, i) => (
             <div className="p-2" key={i}>{d.name}</div>
           ))}
-        </div>
+        </div> */}
 
         <div className="flex items-center mt-16">
           <button
@@ -183,6 +223,6 @@ function Search() {
       </div>
     </div>
   );
-}
+};
 
 export default Search;
