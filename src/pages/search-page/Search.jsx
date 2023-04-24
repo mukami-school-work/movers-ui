@@ -66,20 +66,45 @@ const Search = () => {
     }
   };
 
+  // const handleIncreaseQuantity = (item) => {
+  //   const index = cartItems.findIndex((cartItem) => cartItem.id === item.id);
+  //   if (index >= 0) {
+  //     const newCartItems = [...cartItems];
+  //     newCartItems[index].quantity += 1;
+  //     setCartItems(newCartItems);
+  //   }
+  // };
+
   const handleIncreaseQuantity = (item) => {
     const index = cartItems.findIndex((cartItem) => cartItem.id === item.id);
     if (index >= 0) {
       const newCartItems = [...cartItems];
-      newCartItems[index].quantity += 1;
-      setCartItems(newCartItems);
+      const quantity = parseInt(newCartItems[index].quantity); // Convert quantity to a number
+      if (!isNaN(quantity)) {
+        // Check if quantity is a valid number
+        newCartItems[index].quantity = quantity + 1; // Increment the quantity by one
+        setCartItems(newCartItems);
+      }
     }
   };
+
+  // const handleDecreaseQuantity = (item) => {
+  //   const index = cartItems.findIndex((cartItem) => cartItem.id === item.id);
+  //   if (index >= 0) {
+  //     const newCartItems = [...cartItems];
+  //     newCartItems[index].quantity -= 1;
+  //     setCartItems(newCartItems);
+  //   }
+  // };
 
   const handleDecreaseQuantity = (item) => {
     const index = cartItems.findIndex((cartItem) => cartItem.id === item.id);
     if (index >= 0) {
       const newCartItems = [...cartItems];
       newCartItems[index].quantity -= 1;
+      if (newCartItems[index].quantity === 0) {
+        newCartItems.splice(index, 1);
+      }
       setCartItems(newCartItems);
     }
   };
