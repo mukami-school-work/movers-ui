@@ -12,6 +12,12 @@ function Location() {
        {/* <img src={pickup} alt="Left" className="w-1/4 md:w-1/5 object-cover h-full" /> */}
        <div className="flex-1 flex justify-center items-center">
          <div className="flex flex-col md:flex-row items-center ml-8 rounded-lg">
+         <div className="relative flex-1">
+               <input
+                 type="text"
+                 placeholder="Pickup location"
+                 className="w-full h-16 py-4 pl-6 pr-2 text-lg text-black placeholder-black border border-gray-300 rounded-full focus:outline-none focus:shadow-outline-green"
+               />
   )
 }
 
