@@ -183,24 +183,6 @@ const Search = () => {
               <ArrowRightIcon className="h-7 w-7 ml-2 text-2xl" />
             </button>
           </div>
-          {/* <div
-            className={`flex items-center ${
-              cartVisible ? "flex" : "hidden"
-            } fixed top-0 right-0 h-screen w-full bg-black bg-opacity-25`}
-          >
-            <div className="bg-white rounded-lg w-1/2 h-screen p-4 overflow-y-auto">
-              <h2 className="text-lg font-bold mb-4">Your Inventory</h2>
-              {cartItems.map((item) => (
-                <div
-                  key={item.id}
-                  className="flex items-center justify-between border-b py-2"
-                >
-                  <div>
-                    <p className="font-bold">{item.name}</p>
-                    {/* <p className="text-gray-600">
-                      ${item.price} x {item.quantity}
-                    </p> */}
-          {/* </div> */}
       
           <div className="fixed bottom-0 right-0 p-6 bg-white shadow-xl rounded-tl-2xl">
             <button
