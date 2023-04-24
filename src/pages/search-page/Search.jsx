@@ -222,12 +222,7 @@ const Search = () => {
 
           {/* </div>
               ))} */}
-          {/* <div className="flex justify-between mt-4">
-                <p className="font-bold">Total:</p>
-                <p>${totalPrice.toFixed(2)}</p>
-              </div> */}
-          {/* </div>
-          </div>  */}
+          
           <div className="fixed bottom-0 right-0 p-6 bg-white shadow-xl rounded-tl-2xl">
             <button
               className="bg-primary-green text-white px-4 py-2 rounded-lg focus:outline-none"
