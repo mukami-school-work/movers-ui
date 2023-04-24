@@ -3,8 +3,6 @@ import axios from "axios";
 import { ArrowRightIcon, SearchIcon } from "@heroicons/react/outline";
 
 import Inventories from "./Inventories";
-import Pagination from "./Pagination";
-// import "./styles.css";
 
 const Search = () => {
   const [inventories, setInventories] = useState([]);
@@ -43,22 +41,8 @@ const Search = () => {
     indexOfLastPost
   );
 
-  // Change page
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
-
-  //   return (
-  //     <div className="container mt-5">
-  //       <h1 className="text-primary mb-3">Pagination App</h1>
-  //       <Inventories inventories={currentInventories} loading={loading} />
-  //       <Pagination
-  //         currentPage={currentPage}
-  //         inventoriesPerPage={inventoriesPerPage}
-  //         totalInventories={inventories.length}
-  //         paginate={paginate}
-  //       />
-  //     </div>
-  //   );
-  // };
+  // // Change page
+  // const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -100,10 +84,10 @@ const Search = () => {
     }
   };
 
-  const totalPrice = cartItems.reduce(
-    (acc, item) => acc + item.price * item.quantity,
-    0
-  );
+  // const totalPrice = cartItems.reduce(
+  //   (acc, item) => acc + item.price * item.quantity,
+  //   0
+  // );
 
   const handleRemoveFromCart = (item) => {
     const newCartItems = cartItems.filter(
@@ -144,20 +128,19 @@ const Search = () => {
             </button>
           </div>
         </form>
-        <Inventories inventories={currentInventories} loading={loading} />
-        <Pagination
-          currentPage={currentPage}
-          inventoriesPerPage={inventoriesPerPage}
-          totalInventories={inventories.length}
-          paginate={paginate}
+        <Inventories
+          inventories={currentInventories}
+          loading={loading}
+          handleAddToCart={handleAddToCart}
         />
+
         {/* <div className="text-gray-500 p-6 font-bold">
           {inventory.map((d, i) => (
             <div className="p-2" key={i}>{d.name}</div>
           ))}
         </div> */}
 
-        <div className="flex items-center mt-16">
+        <div className="flex items-center mt-2">
           <button
             className="bg-primary-green text-white px-4 py-2 rounded-lg mr-4 focus:outline-none"
             onClick={handleCartToggle}
@@ -173,7 +156,7 @@ const Search = () => {
               <ArrowRightIcon className="h-7 w-7 ml-2 text-2xl" />
             </button>
           </div>
-          <div
+          {/* <div
             className={`flex items-center ${
               cartVisible ? "flex" : "hidden"
             } fixed top-0 right-0 h-screen w-full bg-black bg-opacity-25`}
@@ -187,11 +170,11 @@ const Search = () => {
                 >
                   <div>
                     <p className="font-bold">{item.name}</p>
-                    <p className="text-gray-600">
+                    {/* <p className="text-gray-600">
                       ${item.price} x {item.quantity}
-                    </p>
-                  </div>
-                  <div className="flex items-center">
+                    </p> */}
+                  {/* </div> */}
+                  {/* <div className="flex items-center">
                     <button
                       className="text-gray-400 hover:text-gray-600 focus:outline-none focus:text-gray-600"
                       onClick={() => handleIncreaseQuantity(item)}
@@ -210,15 +193,16 @@ const Search = () => {
                     >
                       Remove
                     </button>
-                  </div>
-                </div>
-              ))}
-              <div className="flex justify-between mt-4">
+                  </div> */}
+                  
+                {/* </div>
+              ))} */}
+              {/* <div className="flex justify-between mt-4">
                 <p className="font-bold">Total:</p>
                 <p>${totalPrice.toFixed(2)}</p>
-              </div>
-            </div>
-          </div>
+              </div> */}
+            {/* </div>
+          </div>  */}
         </div>
       </div>
     </div>

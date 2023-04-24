@@ -9,7 +9,7 @@ const Pagination = ({ inventoryPerPage, totalInventory, currentPage, paginate })
 
   console.log(pageNumbers);
   return (
-    <nav className="flex justify-center">
+    <div className="flex justify-center">
       <ul className="pagination">
         {pageNumbers.map((number) => (
           <li
@@ -30,7 +30,7 @@ const Pagination = ({ inventoryPerPage, totalInventory, currentPage, paginate })
           </li>
         ))}
       </ul>
-    </nav>
+    </div>
   );
 };
 
