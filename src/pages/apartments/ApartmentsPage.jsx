@@ -17,7 +17,10 @@ function ApartmentsPage() {
   };
 
   return (
-    <div>ApartmentsPage</div>
+    <div className="w-screen h-screen flex flex-col justify-center items-center">
+      <h1 className="text-4xl text-green-500 mb-4 mt-8">
+        Kindly choose your current home size.
+      </h1>
   )
 }
 
