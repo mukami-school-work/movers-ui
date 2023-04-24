@@ -93,11 +93,11 @@ function Search() {
           >
             View Items ({cartItems.length})
           </button>
-          <div className="bg-green-500 rounded-lg py-4 px-8 shadow-md flex justify-between items-center mr-8 fixed bottom-28 right-0 w-full lg:w-auto">
+          <div className="bg-primary-green rounded-lg py-4 px-8 shadow-md flex justify-between items-center mr-8 fixed bottom-28 right-0 w-full lg:w-auto">
             <p className="text-sm text-gray-600">
               <span className="pr-4 text-2xl">Step 1 of 4</span>
             </p>
-            <button className="bg-green-500 rounded-lg px-4 py-2 text-white flex items-center">
+            <button className="bg-primary-green rounded-lg px-4 py-2 text-white flex items-center">
               <span className="px-2 text-2xl">Next</span>
               <ArrowRightIcon className="h-7 w-7 ml-2 text-2xl" />
             </button>
