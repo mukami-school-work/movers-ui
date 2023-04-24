@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { FaCheck, FaChevronRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
+
+
 
 function ApartmentsPage() {
   const [apartments, setApartments] = useState([]);
@@ -16,6 +19,10 @@ function ApartmentsPage() {
   const handleApartmentClick = (id) => {
     setSelectedApartmentId(id);
   };
+  const handleNextClick = () => {
+   
+  };
+
 
   return (
     <div className="w-screen h-screen flex flex-col justify-center items-center">
@@ -43,6 +50,16 @@ function ApartmentsPage() {
           </div>
         ))}
       </div>
+      <Link
+        to="/search"
+        className={`bg-green-500 rounded-lg text-white font-bold py-2 px-4 bottom-16 right-16 absolute ${
+          selectedApartmentId ? "" : "opacity-50 cursor-not-allowed"
+        }`}
+        onClick={handleNextClick}
+        disabled={!selectedApartmentId}
+      >
+        Next
+      </Link>
     </div>
   )
 }
