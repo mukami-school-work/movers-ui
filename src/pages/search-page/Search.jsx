@@ -173,8 +173,8 @@ const Search = () => {
                     {/* <p className="text-gray-600">
                       ${item.price} x {item.quantity}
                     </p> */}
-                  {/* </div> */}
-                  {/* <div className="flex items-center">
+          {/* </div> */}
+          {/* <div className="flex items-center">
                     <button
                       className="text-gray-400 hover:text-gray-600 focus:outline-none focus:text-gray-600"
                       onClick={() => handleIncreaseQuantity(item)}
@@ -194,15 +194,55 @@ const Search = () => {
                       Remove
                     </button>
                   </div> */}
-                  
-                {/* </div>
+
+          {/* </div>
               ))} */}
-              {/* <div className="flex justify-between mt-4">
+          {/* <div className="flex justify-between mt-4">
                 <p className="font-bold">Total:</p>
                 <p>${totalPrice.toFixed(2)}</p>
               </div> */}
-            {/* </div>
+          {/* </div>
           </div>  */}
+          <div className="fixed bottom-0 right-0 p-6 bg-white shadow-xl rounded-tl-2xl">
+            <button
+              className="bg-primary-green text-white px-4 py-2 rounded-lg focus:outline-none"
+              onClick={handleCartToggle}
+            >
+              {cartVisible ? "Close Cart" : "Open Cart"}
+            </button>
+            {cartVisible && (
+              <div className="mt-4">
+                {cartItems.map((item) => (
+                  <div key={item.id} className="flex justify-between mb-2">
+                    <div>{item.name}</div>
+                    <div className="flex items-center">
+                      <button
+                        className="bg-gray-200 text-gray-700 px-2 py-1 rounded-md mr-2 focus:outline-none"
+                        onClick={() => handleDecreaseQuantity(item)}
+                      >
+                        -
+                      </button>
+                      <span>{item.quantity}</span>
+                      <button
+                        className="bg-gray-200 text-gray-700 px-2 py-1 rounded-md ml-2 focus:outline-none"
+                        onClick={() => handleIncreaseQuantity(item)}
+                      >
+                        +
+                      </button>
+                      {/* <div className="ml-4">${item.price * item.quantity}</div> */}
+                      <button
+                        className="bg-red-500 text-white px-2 py-1 ml-4 rounded-md focus:outline-none"
+                        onClick={() => handleRemoveFromCart(item)}
+                      >
+                        X
+                      </button>
+                    </div>
+                  </div>
+                ))}
+                {/* <div className="font-bold mt-2">Total Price: ${totalPrice}</div> */}
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>
