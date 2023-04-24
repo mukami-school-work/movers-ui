@@ -80,7 +80,7 @@ function Search() {
             />
             <button
               type="submit"
-              className="absolute right-0 top-0 h-full w-14 text-green-500 flex items-center justify-center focus:outline-none"
+              className="absolute right-0 top-0 h-full w-14 text-primary-green flex items-center justify-center focus:outline-none"
             >
               <SearchIcon className="h-12 w-12" />
             </button>
