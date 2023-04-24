@@ -9,6 +9,13 @@ function ApartmentsPage() {
       .then((data) => setApartments(data))
       .catch((error) => console.log(error));
   }, []);
+
+  const [selectedApartmentId, setSelectedApartmentId] = useState(null);
+
+  const handleApartmentClick = (id) => {
+    setSelectedApartmentId(id);
+  };
+
   return (
     <div>ApartmentsPage</div>
   )
