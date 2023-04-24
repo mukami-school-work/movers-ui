@@ -20,10 +20,10 @@ function Search() {
       .catch((err) => console.log(err));
   }, []);
 
-  // const handleFilter = (value) => {
-  //   const res = filterinventory.filter((f) => f.name.toLowerCase().includes(value));
-  //   setInventory(res);
-  // };
+  const handleFilter = (value) => {
+    const res = filterinventory.filter((f) => f.name.toLowerCase().includes(value));
+    setInventory(res);
+  };
 
   const handleSearch = (e) => {
     e.preventDefault();
