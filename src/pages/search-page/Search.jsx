@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { ArrowRightIcon, SearchIcon } from "@heroicons/react/outline";
 
-import Inventories from "./components/Inventories";
-import Pagination from "./components/Pagination";
+import Inventories from "./Inventories";
+import Pagination from "./Pagination";
 // import "./styles.css";
 
 const Search = () => {
