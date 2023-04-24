@@ -8,6 +8,10 @@ function Location() {
            Move comfortably anywhere anytime
          </h1>
        </header>
+       <div className="flex flex-col md:flex-row  justify-center w-full px-8">
+       {/* <img src={pickup} alt="Left" className="w-1/4 md:w-1/5 object-cover h-full" /> */}
+       <div className="flex-1 flex justify-center items-center">
+         <div className="flex flex-col md:flex-row items-center ml-8 rounded-lg">
   )
 }
 
