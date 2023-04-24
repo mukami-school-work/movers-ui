@@ -161,12 +161,6 @@ const Search = () => {
           handleAddToCart={handleAddToCart}
         />
 
-        {/* <div className="text-gray-500 p-6 font-bold">
-          {inventory.map((d, i) => (
-            <div className="p-2" key={i}>{d.name}</div>
-          ))}
-        </div> */}
-
         <div className="flex items-center mt-2">
           <button
             className="bg-primary-green text-white px-4 py-2 rounded-lg mr-4 focus:outline-none"
