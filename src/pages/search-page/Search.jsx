@@ -139,7 +139,6 @@ const Search = () => {
               type="text"
               className="block w-full bg-white border-b-4 rounded-lg py-3 px-4 pr-10 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
               placeholder="Search items in your apartment"
-              // value={searchQuery}
               onChange={(e) => handleFilter(e.target.value)}
             />
             <button
@@ -199,7 +198,7 @@ const Search = () => {
                       >
                         +
                       </button>
-                      
+
                       {/* remove from cart button */}
                       <button
                         className="bg-red-500 text-white px-2 py-1 ml-4 rounded-md focus:outline-none"
