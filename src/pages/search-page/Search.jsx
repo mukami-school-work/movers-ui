@@ -84,6 +84,8 @@ const Search = () => {
         // Check if quantity is a valid number
         newCartItems[index].quantity = quantity + 1; // Increment the quantity by one
         setCartItems(newCartItems);
+        console.log(newCartItems);
+        
       }
     }
   };
@@ -236,7 +238,6 @@ const Search = () => {
                     </div>
                   </div>
                 ))}
-                {/* <div className="font-bold mt-2">Total Price: ${totalPrice}</div> */}
               </div>
             )}
           </div>
