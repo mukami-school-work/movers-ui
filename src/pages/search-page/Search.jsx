@@ -111,11 +111,6 @@ const Search = () => {
     }
   };
 
-  // const totalPrice = cartItems.reduce(
-  //   (acc, item) => acc + item.price * item.quantity,
-  //   0
-  // );
-
   const handleRemoveFromCart = (item) => {
     const newCartItems = cartItems.filter(
       (cartItem) => cartItem.id !== item.id
