@@ -199,7 +199,8 @@ const Search = () => {
                       >
                         +
                       </button>
-                      {/* <div className="ml-4">${item.price * item.quantity}</div> */}
+                      
+                      {/* remove from cart button */}
                       <button
                         className="bg-red-500 text-white px-2 py-1 ml-4 rounded-md focus:outline-none"
                         onClick={() => handleRemoveFromCart(item)}
