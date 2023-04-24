@@ -1,11 +1,29 @@
-import { useState } from 'react';
-import { ArrowRightIcon, SearchIcon } from '@heroicons/react/outline';
-
+import React, { useState, useEffect } from "react";
+import { ArrowRightIcon, SearchIcon } from "@heroicons/react/outline";
 
 function Search() {
-    const [searchQuery, setSearchQuery] = useState('');
-    const [cartItems, setCartItems] = useState([]);
-    const [cartVisible, setCartVisible] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [cartItems, setCartItems] = useState([]);
+  const [cartVisible, setCartVisible] = useState(false);
+  const [inventory, setInventory] = useState([]);
+  const [filterinventory, setFilterinventory] = useState([]);
+
+  useEffect(() => {
+    fetch("http://127.0.0.1:4000/inventories")
+      .then((res) => res.json())
+      .then((inventory) => {
+        console.log(inventory);
+        setInventory(inventory);
+        setFilterinventory(inventory);
+      }
+      )
+      .catch((err) => console.log(err));
+  }, []);
+
+  // const handleFilter = (value) => {
+  //   const res = filterinventory.filter((f) => f.name.toLowerCase().includes(value));
+  //   setInventory(res);
+  // };
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -47,10 +65,15 @@ function Search() {
     }
   };
 
-  const totalPrice = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+  const totalPrice = cartItems.reduce(
+    (acc, item) => acc + item.price * item.quantity,
+    0
+  );
 
   const handleRemoveFromCart = (item) => {
-    const newCartItems = cartItems.filter((cartItem) => cartItem.id !== item.id);
+    const newCartItems = cartItems.filter(
+      (cartItem) => cartItem.id !== item.id
+    );
     setCartItems(newCartItems);
   };
   return (
@@ -75,8 +98,8 @@ function Search() {
               type="text"
               className="block w-full bg-white border-b-4 rounded-lg py-3 px-4 pr-10 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
               placeholder="Search items in your apartment"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              // value={searchQuery}
+              // onChange={(e) => handleFilter(e.target.value)}
             />
             <button
               type="submit"
@@ -86,6 +109,11 @@ function Search() {
             </button>
           </div>
         </form>
+        <div className="search-result">
+          {inventory.map((d, i) => (
+            <div key={i}>{d.name}</div>
+          ))}
+        </div>
         <div className="flex items-center mt-16">
           <button
             className="bg-primary-green text-white px-4 py-2 rounded-lg mr-4 focus:outline-none"
@@ -154,4 +182,4 @@ function Search() {
   );
 }
 
-export default Search
+export default Search;
