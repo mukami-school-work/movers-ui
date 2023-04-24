@@ -62,9 +62,9 @@ function NavExRootPath({ logout }) {
             <li>
               <a
                 href="/"
-                onClick={() => {
-                  localStorage.removeItem("jwt");
-                }}
+                onClick={() => logout()}
+
+
                 className="inline-flex items-center justify-center w-full h-12 px-6 text-sm tracking-wide text-white transition duration-200 rounded-lg shadow-md bg-primary-green hover:bg-deep-purple-accent-700 hover:cursor-pointer focus:shadow-outline focus:outline-none"
                 aria-label="Log Out"
                 title="Log Out"
@@ -466,9 +466,9 @@ function NavRootPath({ isLogin, logout }) {
                           <li>
                             <a
                               href="/"
-                              onClick={() => {
-                                localStorage.removeItem("jwt");
-                              }}
+                              onClick={() => logout()}
+                                
+                              
                               className="inline-flex items-center justify-center w-full h-12 px-6 text-sm tracking-wide text-white transition duration-200 rounded-lg shadow-md bg-primary-green hover:bg-deep-purple-accent-700 hover:cursor-pointer focus:shadow-outline focus:outline-none"
                               aria-label="Log Out"
                               title="Log Out"
