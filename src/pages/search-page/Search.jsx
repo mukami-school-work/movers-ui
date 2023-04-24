@@ -99,7 +99,7 @@ function Search() {
               className="block w-full bg-white border-b-4 rounded-lg py-3 px-4 pr-10 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
               placeholder="Search items in your apartment"
               // value={searchQuery}
-              // onChange={(e) => handleFilter(e.target.value)}
+              onChange={(e) => handleFilter(e.target.value)}
             />
             <button
               type="submit"
