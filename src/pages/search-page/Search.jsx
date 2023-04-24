@@ -199,30 +199,7 @@ const Search = () => {
                       ${item.price} x {item.quantity}
                     </p> */}
           {/* </div> */}
-          {/* <div className="flex items-center">
-                    <button
-                      className="text-gray-400 hover:text-gray-600 focus:outline-none focus:text-gray-600"
-                      onClick={() => handleIncreaseQuantity(item)}
-                    >
-                      <ArrowRightIcon className="h-5 w-5" />
-                    </button>
-                    <button
-                      className="text-gray-400 hover:text-gray-600 ml-2 focus:outline-none focus:text-gray-600"
-                      onClick={() => handleDecreaseQuantity(item)}
-                    >
-                      <ArrowRightIcon className="h-5 w-5 transform rotate-180" />
-                    </button>
-                    <button
-                      className="text-red-500 hover:text-red-700 ml-2 focus:outline-none focus:text-red-700"
-                      onClick={() => handleRemoveFromCart(item)}
-                    >
-                      Remove
-                    </button>
-                  </div> */}
-
-          {/* </div>
-              ))} */}
-          
+      
           <div className="fixed bottom-0 right-0 p-6 bg-white shadow-xl rounded-tl-2xl">
             <button
               className="bg-primary-green text-white px-4 py-2 rounded-lg focus:outline-none"
