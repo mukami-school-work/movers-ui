@@ -21,7 +21,9 @@ function Search() {
   }, []);
 
   const handleFilter = (value) => {
-    const res = filterinventory.filter((f) => f.name.toLowerCase().includes(value));
+    const res = filterinventory.filter((f) =>
+      f.name.toLowerCase().includes(value.toLowerCase())
+    );
     setInventory(res);
   };
 
@@ -84,7 +86,7 @@ function Search() {
       </nav>
 
       {/* Main Content */}
-      <div className="max-w-4xl mx-auto px-8 py-16 flex flex-col items-center">
+      <div className="max-w-4xl mx-auto mt-16 px-8 py-16 flex flex-col items-center">
         <h1 className="text-4xl text-primary-green text-center mb-6">
           What would you like to move?
         </h1>
@@ -109,11 +111,12 @@ function Search() {
             </button>
           </div>
         </form>
-        <div className="search-result">
+        <div className="text-gray-500 p-6 font-bold">
           {inventory.map((d, i) => (
-            <div key={i}>{d.name}</div>
+            <div className="p-2" key={i}>{d.name}</div>
           ))}
         </div>
+
         <div className="flex items-center mt-16">
           <button
             className="bg-primary-green text-white px-4 py-2 rounded-lg mr-4 focus:outline-none"
