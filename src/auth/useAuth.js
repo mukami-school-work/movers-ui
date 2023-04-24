@@ -30,8 +30,10 @@ export default function useAuth() {
   };
 
   const logout = () => {
-    setUser(null);
-    localStorage.removeItem("authToken");
+
+    localStorage.removeItem("jwt");
+
+    window.location.reload();
   };
 
   useEffect(() => {
