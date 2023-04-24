@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { FaCheck, FaChevronRight } from "react-icons/fa";
 
 function ApartmentsPage() {
   const [apartments, setApartments] = useState([]);
