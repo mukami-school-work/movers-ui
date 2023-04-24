@@ -88,7 +88,7 @@ function Search() {
         </form>
         <div className="flex items-center mt-16">
           <button
-            className="bg-green-500 text-white px-4 py-2 rounded-lg mr-4 focus:outline-none"
+            className="bg-primary-green text-white px-4 py-2 rounded-lg mr-4 focus:outline-none"
             onClick={handleCartToggle}
           >
             View Items ({cartItems.length})
