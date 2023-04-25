@@ -11,7 +11,7 @@ const ListingsPage = () => {
           At Movers we pride in offering the best moving solutions based on your
           needs and location. We have partnered with some of the best movers,
           with very high ratings in Nairobi. To get you started choose from the
-          list below and click read more to view more about each company.
+          list below and click book now button.
         </p>
       </div>
       <div className="container mx-auto">
