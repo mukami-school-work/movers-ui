@@ -35,6 +35,11 @@ function Location() {
              </button>
            </div>
          </div>
+         </div>
+       <div className="flex flex-col justify-center items-center px-8 md:px-0">
+         <h2 className="text-2xl font-bold text-center text-gray-700 mt-12 mb-4">
+           Why choose us?
+         </h2>
   )
 }
 
