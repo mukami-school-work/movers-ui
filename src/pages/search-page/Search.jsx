@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import { ArrowRightIcon, SearchIcon } from "@heroicons/react/outline";
 
@@ -12,6 +13,7 @@ const Search = () => {
   const [filterinventory, setFilterinventory] = useState([]);
   const [cartItems, setCartItems] = useState([]);
   const [cartVisible, setCartVisible] = useState(false);
+  const [selected, setSelected] = useState()
 
   useEffect(() => {
     const fetchInventories = async () => {
@@ -41,13 +43,14 @@ const Search = () => {
     indexOfLastPost
   );
 
-  // // Change page
-  // const paginate = (pageNumber) => setCurrentPage(pageNumber);
-
   const handleSearch = (e) => {
     e.preventDefault();
     // handle search logic here
   };
+
+   const handleNextClick = () => {
+    
+   };
 
   const handleCartToggle = () => {
     setCartVisible(!cartVisible);
@@ -119,7 +122,6 @@ const Search = () => {
   };
   return (
     <div className="min-h-screen bg-gray-100">
-
       {/* Main Content */}
       <div className="max-w-4xl mx-auto mt-8 px-8 py-16 flex flex-col items-center">
         <h1 className="text-4xl text-primary-green text-center mb-6">
@@ -158,16 +160,18 @@ const Search = () => {
           >
             View Items ({cartItems.length})
           </button>
-          <div className="bg-primary-green rounded-lg py-4 px-8 shadow-md flex justify-between items-center mr-8 fixed bottom-28 right-0 w-full lg:w-auto">
-            <p className="text-sm text-gray-600">
-              <span className="pr-4 text-2xl">Step 1 of 4</span>
-            </p>
-            <button className="bg-primary-green rounded-lg px-4 py-2 text-white flex items-center">
-              <span className="px-2 text-2xl">Next</span>
-              <ArrowRightIcon className="h-7 w-7 ml-2 text-2xl" />
-            </button>
-          </div>
-      
+
+          <Link
+            to="/boxes"
+            className={`bg-primary-green rounded-lg text-white font-bold py-2 px-4 bottom-16 right-16 absolute ${
+              setSelected ? "" : "opacity-50 cursor-not-allowed"
+            }`}
+            onClick={handleNextClick}
+            disabled={!selected}
+          >
+            Next
+          </Link>
+
           <div className="fixed bottom-0 right-0 p-6 bg-white shadow-xl rounded-tl-2xl">
             <button
               className="bg-primary-green text-white px-4 py-2 rounded-lg focus:outline-none"
