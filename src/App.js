@@ -6,12 +6,12 @@ import Reviews from "pages/reviews-page/Reviews";
 import Search from "pages/search-page/Search";
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import ApartmentsPage from "./pages/apartments/ApartmentsPage";
 import BoxesRange from "./pages/boxes-page/BoxesRange";
 import ListingsPage from "./pages/listings page/ListingsPage";
+import Location from "./pages/location/Location";
 import Login from "./pages/signup-page/LoginPage";
 import Signup from "./pages/signup-page/SignUpPage";
-import ApartmentsPage from "./pages/apartments/ApartmentsPage";
-import  Location  from "./pages/location/Location";
 
 function App() {
   const { user, login, logout, localhost, server, isLogin } = useAuth();
@@ -49,7 +49,7 @@ function App() {
           }
         />
         <Route
-          path="/location"
+          path="/search"
           element={
             <PrivateRoute>
               <Search />
@@ -80,8 +80,8 @@ function App() {
             </PrivateRoute>
           }
         />
-         <Route
-          path="/location"
+        <Route
+          path="/apartment"
           element={
             <PrivateRoute>
               <ApartmentsPage />

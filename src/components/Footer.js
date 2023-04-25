@@ -31,52 +31,44 @@ export default function Footer() {
             </a>
             <div className="mt-6 lg:max-w-sm">
               <p className="text-sm text-gray-400">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam.
-              </p>
-              <p className="mt-4 text-sm text-gray-400">
-                Eaque ipsa quae ab illo inventore veritatis et quasi architecto
-                beatae vitae dicta sunt explicabo.
+                Your all-in-one platform to get you started and sorted when
+                moving, linking you to the best moving companies at affordable
+                rates.
               </p>
             </div>
           </div>
           <div className="space-y-2 text-sm">
             <p className="text-base font-bold tracking-wide text-gray-400">
-              Contacts
+              Sections
             </p>
             <div className="flex">
-              <p className="mr-1 text-gray-400">Phone:</p>
               <a
-                href="tel:850-123-5021"
-                aria-label="Our phone"
-                title="Our phone"
+                href="#features"
+                aria-label="Our features"
+                title="Our features"
                 className="transition-colors duration-300 text-primary-green hover:text-deep-purple-800"
               >
-                850-123-5021
+                Why Movers?
               </a>
             </div>
             <div className="flex">
-              <p className="mr-1 text-gray-400">Email:</p>
               <a
-                href="mailto:info@lorem.mail"
-                aria-label="Our email"
-                title="Our email"
+                href="#testimonials"
+                aria-label="Our testimonials"
+                title="Our testimonials"
                 className="transition-colors duration-300 text-primary-green hover:text-deep-purple-800"
               >
-                info@lorem.mail
+                Testimonials
               </a>
             </div>
             <div className="flex">
-              <p className="mr-1 text-gray-400">Address:</p>
               <a
-                href="https://www.google.com/maps"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Our address"
-                title="Our address"
+                href="#team"
+                aria-label="Our team"
+                title="Our team"
                 className="transition-colors duration-300 text-primary-green hover:text-deep-purple-800"
               >
-                312 Lovely Street, NY
+                Our Team
               </a>
             </div>
           </div>
@@ -112,8 +104,12 @@ export default function Footer() {
               </a>
             </div>
             <p className="mt-4 text-sm text-gray-400">
-              Bacon ipsum dolor amet short ribs pig sausage prosciutto chicken
-              spare ribs salami.
+              We wish you a great day ahead but allow us to turn the wish into a
+              reality. <br />
+              <a href="/signup" className="text-primary-green">
+                {" "}
+                Get Started
+              </a>
             </p>
           </div>
         </div>

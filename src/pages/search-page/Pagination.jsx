@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 
 const Pagination = ({ inventoryPerPage, totalInventory, currentPage, paginate }) => {
@@ -17,7 +18,7 @@ const Pagination = ({ inventoryPerPage, totalInventory, currentPage, paginate })
             className={`${
               currentPage === number ? "bg-blue-500" : "bg-white"
             } border rounded-md mx-1`}
-          >
+            >
             <a
               href="#"
               className={`${

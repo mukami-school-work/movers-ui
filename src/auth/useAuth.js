@@ -13,7 +13,7 @@ export default function useAuth() {
 
   const login = async (email, password) => {
     try {
-      const resp = await axios.post(`${server}/login`, {
+      const resp = await axios.post(`${localhost}/login`, {
         email: email,
         password: password,
       });
