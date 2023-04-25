@@ -11,7 +11,7 @@ import ListingsPage from "./pages/listings page/ListingsPage";
 import Login from "./pages/signup-page/LoginPage";
 import Signup from "./pages/signup-page/SignUpPage";
 import ApartmentsPage from "./pages/apartments/ApartmentsPage";
-import { Location } from "./pages/location/Location";
+import  Location  from "./pages/location/Location";
 
 function App() {
   const { user, login, logout, localhost, server, isLogin } = useAuth();
@@ -65,7 +65,7 @@ function App() {
           }
         />
         <Route
-          path="/reviews"
+          path="/pickup"
           element={
             <PrivateRoute>
               <Location />
@@ -81,7 +81,7 @@ function App() {
           }
         />
          <Route
-          path="/apartments"
+          path="/location"
           element={
             <PrivateRoute>
               <ApartmentsPage />
