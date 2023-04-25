@@ -30,6 +30,11 @@ function Location() {
                  <FiChevronDown className="text-white text-xl" />
                </div>
              </div>
+             <button className="w-full md:w-auto h-16 py-4 px-6 text-lg text-white font-bold bg-green-500 rounded-full hover:bg-gray-900 focus:outline-none focus:shadow-outline-green">
+               Get Quote
+             </button>
+           </div>
+         </div>
   )
 }
 
