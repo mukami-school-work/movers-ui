@@ -26,6 +26,10 @@ function Location() {
                  placeholder="Dropoff location"
                  className="w-full h-16 py-4 pl-6 pr-2 text-lg text-black placeholder-black border border-gray-500 rounded-full focus:outline-none focus:shadow-outline-green"
                />
+               <div className="absolute inset-y-0 left-0 flex items-center pl-4">
+                 <FiChevronDown className="text-white text-xl" />
+               </div>
+             </div>
   )
 }
 
