@@ -49,7 +49,7 @@ function App() {
           }
         />
         <Route
-          path="/location"
+          path="/search"
           element={
             <PrivateRoute>
               <Search />

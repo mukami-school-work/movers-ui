@@ -1,5 +1,4 @@
 import Card from "./Card";
-// import CardReview from "./CardReview";
 
 const ListingsPage = () => {
   return (
@@ -10,11 +9,6 @@ const ListingsPage = () => {
           <Card />
           <Card />
           <Card />
-          {/* <CardReview />
-          <CardReview />
-          <CardReview />
-          <CardReview />
-          <CardReview /> */}
         </div>
       </div>
     </div>
