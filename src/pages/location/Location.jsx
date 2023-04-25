@@ -44,6 +44,14 @@ function Location() {
            We provide a seamless and stress-free moving experience for all your
            belongings.
          </p>
+         <ul className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+           <li className="bg-gray-200 rounded-lg shadow-md p-8">
+             <h3 className="text-2xl font-bold text-green-500 mb-2">Safety First</h3>
+             <p className="text-gray-700">
+               We prioritize the safety of your belongings and ensure they are
+               moved with the utmost care.
+             </p>
+           </li>
   )
 }
 
