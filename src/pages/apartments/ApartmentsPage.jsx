@@ -23,13 +23,14 @@ function ApartmentsPage() {
    
   };
 
+  console.log(Array.isArray(apartments));
 
   return (
     <div className="w-screen h-screen flex flex-col justify-center items-center">
       <h1 className="text-4xl text-primary-green mb-4 pt-6 mt-24">
         Kindly choose your current home size.
       </h1>
-      <div className="max-w-xl mx-auto">
+      {/* <div className="max-w-xl mx-auto">
         {apartments.map((apartment) => (
           <div
             key={apartment.id}
@@ -49,7 +50,7 @@ function ApartmentsPage() {
             {selectedApartmentId === apartment.id ? null : <FaChevronRight className="w-8 h-8 text-primary-green" />}
           </div>
         ))}
-      </div>
+      </div> */}
       <Link
         to="/search"
         className={`bg-primary-green rounded-lg text-white font-bold py-2 px-4 bottom-16 right-16 absolute ${
