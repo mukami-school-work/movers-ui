@@ -40,6 +40,10 @@ function Location() {
          <h2 className="text-2xl font-bold text-center text-gray-700 mt-12 mb-4">
            Why choose us?
          </h2>
+         <p className="text-lg text-center text-gray-600 mb-8">
+           We provide a seamless and stress-free moving experience for all your
+           belongings.
+         </p>
   )
 }
 
