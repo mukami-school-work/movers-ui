@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaArrowRight, FaCheck } from 'react-icons/fa';
+import { Link } from "react-router-dom";
+
 
 function BoxesRange() {
   const [selected, setSelected] = useState(0);
@@ -11,8 +13,12 @@ function BoxesRange() {
       .then((data) => setRanges(data));
   }, []);
 
+  const handleNextClick = () => {
+   
+  };
+
   return (
-    <div className="flex flex-col items-center justify-center mt-32 pt-8 h-screen">
+    <div className="flex flex-col items-center justify-center mt-48 pt-8 h-screen">
       <div className="w-3/5 p-4">
         <h1 className="text-3xl md:text-4xl font-bold text-grey-800 text-center mb-8">
           Please select the number of boxes, bags or suit cases you want to move.
@@ -38,9 +44,16 @@ function BoxesRange() {
           ))}
         </div>
         <div className="flex justify-end mt-8">
-          <button className="flex items-center justify-center h-10 md:h-12 px-4 rounded-lg bg-green-500 text-white">
-            Next <FaArrowRight className="ml-2" />
-          </button>
+        <Link
+        to="/pickup"
+        className={`bg-primary-green rounded-lg text-white font-bold py-2 px-4 bottom-16 right-16 absolute ${
+          setSelected ? "" : "opacity-50 cursor-not-allowed"
+        }`}
+        onClick={handleNextClick}
+        disabled={!setSelected}
+      >
+        Next
+      </Link>
         </div>
       </div>
     </div>
