@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { ArrowRightIcon, SearchIcon } from '@heroicons/react/outline';
 
 
+
 function Search() {
     const [searchQuery, setSearchQuery] = useState('');
     const [cartItems, setCartItems] = useState([]);

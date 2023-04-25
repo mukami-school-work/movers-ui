@@ -10,6 +10,8 @@ import BoxesRange from "./pages/boxes-page/BoxesRange";
 import ListingsPage from "./pages/listings page/ListingsPage";
 import Login from "./pages/signup-page/LoginPage";
 import Signup from "./pages/signup-page/SignUpPage";
+import ApartmentsPage from "./pages/apartments/ApartmentsPage";
+import { Location } from "./pages/location/Location";
 
 function App() {
   const { user, login, logout, localhost, server, isLogin } = useAuth();
@@ -63,10 +65,26 @@ function App() {
           }
         />
         <Route
+          path="/reviews"
+          element={
+            <PrivateRoute>
+              <Location />
+            </PrivateRoute>
+          }
+        />
+        <Route
           path="/profile"
           element={
             <PrivateRoute>
               <Profile />
+            </PrivateRoute>
+          }
+        />
+         <Route
+          path="/apartments"
+          element={
+            <PrivateRoute>
+              <ApartmentsPage />
             </PrivateRoute>
           }
         />
