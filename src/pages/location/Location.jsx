@@ -59,7 +59,18 @@ function Location() {
  belongings reach their destination on time.
  </p>
  </li>
-  )
-}
+ </ul>
+ <div className="flex justify-center items-center bg-gray-200 rounded-full py-4 px-8 mb-12">
+ <FiArrowUp className="text-green-500 text-2xl mr-2" />
+ <p className="text-gray-700 font-bold text-lg">
+ Book now and get 10% off on your first move!
+ </p>
+ </div>
+ </div>
+ </div>
+
+ );
+ }
+
 
 export default Location
