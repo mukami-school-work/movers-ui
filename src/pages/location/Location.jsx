@@ -52,6 +52,13 @@ function Location() {
                moved with the utmost care.
              </p>
            </li>
+           <li className="bg-gray-200 rounded-lg shadow-md p-8">
+             <h3 className="text-2xl font-bold text-green-500 mb-2">On-Time Delivery</h3>
+ <p className="text-gray-700">
+ We understand the importance of timely delivery and make sure your
+ belongings reach their destination on time.
+ </p>
+ </li>
   )
 }
 
