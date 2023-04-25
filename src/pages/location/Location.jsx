@@ -18,6 +18,14 @@ function Location() {
                  placeholder="Pickup location"
                  className="w-full h-16 py-4 pl-6 pr-2 text-lg text-black placeholder-black border border-gray-300 rounded-full focus:outline-none focus:shadow-outline-green"
                />
+               </div>
+             {/* <FiChevronDown className="text-2xl text-gray-500" /> */}
+             <div className="relative flex-1">
+               <input
+                 type="text"
+                 placeholder="Dropoff location"
+                 className="w-full h-16 py-4 pl-6 pr-2 text-lg text-black placeholder-black border border-gray-500 rounded-full focus:outline-none focus:shadow-outline-green"
+               />
   )
 }
 
