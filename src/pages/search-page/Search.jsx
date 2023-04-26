@@ -1,8 +1,10 @@
 import { ArrowRightIcon, SearchIcon } from "@heroicons/react/outline";
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+import { StateContext } from "hooks/stateProvider";
+import useAuth from "hooks/useAuth";
 import Inventories from "./Inventories";
 
 const Search = () => {
@@ -14,6 +16,8 @@ const Search = () => {
   const [cartItems, setCartItems] = useState([]);
   const [cartVisible, setCartVisible] = useState(false);
   const [selected, setSelected] = useState();
+  const { user } = useAuth();
+  const { setUser_id } = useContext(StateContext);
 
   useEffect(() => {
     const fetchInventories = async () => {
@@ -52,7 +56,9 @@ const Search = () => {
     // handle search logic here
   };
 
-  const handleNextClick = () => {};
+  const handleNextClick = () => {
+    setUser_id(user.id);
+  };
 
   const handleCartToggle = () => {
     setCartVisible(!cartVisible);

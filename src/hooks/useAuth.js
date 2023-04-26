@@ -10,6 +10,7 @@ export default function useAuth() {
   const [apartments, setApartments] = useState([]);
   const [inventories, setInventories] = useState([]);
   const [boxes, setBoxes] = useState([]);
+  const token = localStorage.getItem("jwt");
   const [localhost, server] = [
     "http://localhost:4000",
     "https://rails-lszl.onrender.com",
@@ -21,7 +22,6 @@ export default function useAuth() {
     // Perform any necessary setup or initialization, such as checking the user's authentication status
     const auth = async () => {
       setLoading(true);
-      const token = localStorage.getItem("jwt");
       if (token) {
         // Fetch Apartments
         try {
@@ -77,6 +77,7 @@ export default function useAuth() {
           // If the response is unsuccessful, clear the JWT from local storage and update the user state to null
           logout();
         }
+      } else {
         setLoading(false);
       }
     };
@@ -201,6 +202,7 @@ export default function useAuth() {
   return {
     user,
     setUser,
+    token,
     login,
     isLogin: Boolean(user),
     logout,
@@ -213,6 +215,7 @@ export default function useAuth() {
     spinner,
     apartments,
     inventories,
+    setLoading,
     boxes,
   };
 }

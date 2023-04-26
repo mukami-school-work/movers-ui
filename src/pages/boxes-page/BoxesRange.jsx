@@ -1,18 +1,22 @@
 import { StateContext } from "hooks/stateProvider";
 import useAuth from "hooks/useAuth";
+import useBooking from "hooks/useBooking";
 import React, { useContext, useEffect, useState } from "react";
 import { FaArrowRight, FaCheck } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 function BoxesRange() {
-  const [selected, setSelected] = useState(0);
-  const { boxes, user } = useAuth();
-  const { setBox_id, setUser_id } = useContext(StateContext);
+  const [selected, setSelected] = useState(null);
+  const { boxes, setLoading, loading, spinner } = useAuth();
+  const { bookNow } = useBooking();
+  const { setBox_id } = useContext(StateContext);
 
-  const handleNextClick = () => {
-    setBox_id(selected);
-    setUser_id(user.id);
-    console.log(selected);
+  if (loading) {
+    return spinner();
+  }
+  const handleSubmit = () => {
+    setLoading(true);
+    bookNow();
   };
 
   return (
@@ -67,7 +71,10 @@ function BoxesRange() {
                   ? "bg-primary-green border-primary-green text-white"
                   : "border-gray-300"
               }`}
-              onClick={() => setSelected(index)}
+              onClick={() => {
+                setSelected(index);
+                setBox_id(range.id);
+              }}
             >
               <span className="ml-4 text-base md:text-lg">{range.range}</span>
               {index === selected ? (
@@ -100,13 +107,12 @@ function BoxesRange() {
           </svg>
           Prev Inventory
         </Link>
-        <Link
-          to="/movers"
+        <button
           className={`inline-flex items-center justify-center h-14 px-6 ml-8 text-sm font-semibold tracking-wide text-white transition duration-200 border-transparent rounded-lg shadow-md w-sm bg-primary-green hover:bg-deep-purple-accent-700 hover:cursor-pointer focus:shadow-outline focus:outline-none ${
-            setSelected ? "" : "opacity-50 cursor-not-allowed"
+            selected ? "" : "opacity-50 cursor-not-allowed"
           }`}
-          onClick={handleNextClick}
-          disabled={!setSelected}
+          onClick={handleSubmit}
+          // disabled={!selected}
         >
           Get Quote Now!
           <svg
@@ -123,7 +129,7 @@ function BoxesRange() {
               d="M8.25 4.5l7.5 7.5-7.5 7.5"
             />
           </svg>
-        </Link>
+        </button>
       </div>
     </div>
   );

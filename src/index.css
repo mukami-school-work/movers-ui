@@ -80,14 +80,7 @@ input[type=file]::file-selector-button {
 	border-radius: 10px;
 	flex-wrap: wrap;
 }
-/*
-.spinner {
-	margin: 5%;
-	padding: 20px;
-}
 
-.tag {
-	text-align: center;
-	font-size: 2rem;
-	color: green;
-} */
+.contain-card {
+  background-image: linear-gradient(180deg,transparent,rgba(0,0,0,.7));
+}

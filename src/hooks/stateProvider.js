@@ -31,7 +31,31 @@ export const StateProvider = ({ children }) => {
   const setBox_id = (box_id) => {
     setState({ ...state, box_id });
   };
-  console.log(state);
+
+  const [quotes, setQuotes] = useState([]);
+  const setQuote = (movers) => {
+    setQuotes(() => movers);
+  };
+  const [booking, setBooking] = useState(null);
+  const setBook = (book) => {
+    setBooking(() => book);
+  };
+  const [update, setUpdate] = useState({
+    mover_id: null,
+    booking_id: null,
+    status: true,
+  });
+
+  const setMover_id = (mover_id) => {
+    setUpdate({ ...update, mover_id });
+  };
+  const setBooking_id = (booking_id) => {
+    setUpdate({ ...update, booking_id });
+  };
+  // console.log({ state });
+  console.log({ update });
+  // console.log({ booking });
+  // console.log({ quotes });
   return (
     <StateContext.Provider
       value={{
@@ -42,6 +66,13 @@ export const StateProvider = ({ children }) => {
         setUser_id,
         setApartment_id,
         setBox_id,
+        update,
+        setMover_id,
+        setBooking_id,
+        booking,
+        setBook,
+        quotes,
+        setQuote,
       }}
     >
       {children}
