@@ -178,12 +178,12 @@ const Search = () => {
                         -
                       </button>
                       <span>{item.quantity}</span>
-                      <button
+                      {/* <button
                         className="bg-gray-200 text-gray-700 px-2 py-1 rounded-md ml-2 focus:outline-none"
                         onClick={() => handleIncreaseQuantity(item)}
                       >
                         +
-                      </button>
+                      </button> */}
 
                       {/* remove from cart button */}
                       <button
