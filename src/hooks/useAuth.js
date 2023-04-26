@@ -25,7 +25,7 @@ export default function useAuth() {
       if (token) {
         // Fetch Apartments
         try {
-          const resp = await axios.get(`${localhost}/apartments`, {
+          const resp = await axios.get(`${server}/apartments`, {
             headers: {
               Authorization: `${token}`,
             },
@@ -38,7 +38,7 @@ export default function useAuth() {
 
         // Fetch Inventories
         try {
-          const resp = await axios.get(`${localhost}/inventories`, {
+          const resp = await axios.get(`${server}/inventories`, {
             headers: {
               Authorization: `${token}`,
             },
@@ -51,7 +51,7 @@ export default function useAuth() {
 
         // Fetch Inventories
         try {
-          const resp = await axios.get(`${localhost}/boxes`, {
+          const resp = await axios.get(`${server}/boxes`, {
             headers: {
               Authorization: `${token}`,
             },
@@ -65,7 +65,7 @@ export default function useAuth() {
         // Fetch User
         try {
           // Send a GET request to your backend endpoint to check for authentication
-          const resp = await axios.get(`${localhost}/profile`, {
+          const resp = await axios.get(`${server}/profile`, {
             headers: {
               Authorization: `${token}`,
             },
@@ -148,7 +148,7 @@ export default function useAuth() {
           image: response.data.secure_url,
         };
         axios
-          .post(`${localhost}/users`, railsData)
+          .post(`${server}/users`, railsData)
           .then((response) => {
             console.log(response.data);
             setUser(response.data.user);
@@ -174,7 +174,7 @@ export default function useAuth() {
   const login = async (email, password) => {
     setLoading(true);
     try {
-      const resp = await axios.post(`${localhost}/login`, {
+      const resp = await axios.post(`${server}/login`, {
         email: email,
         password: password,
       });

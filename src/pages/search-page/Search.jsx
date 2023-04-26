@@ -16,13 +16,13 @@ const Search = () => {
   const [cartItems, setCartItems] = useState([]);
   const [cartVisible, setCartVisible] = useState(false);
   const [selected, setSelected] = useState();
-  const { user } = useAuth();
+  const { user, server } = useAuth();
   const { setUser_id } = useContext(StateContext);
 
   useEffect(() => {
     const fetchInventories = async () => {
       setLoading(true);
-      const res = await axios.get("http://127.0.0.1:4000/inventories", {
+      const res = await axios.get(`${server}/inventories`, {
         method: "GET",
         headers: {
           Authorization: localStorage.getItem("jwt"),

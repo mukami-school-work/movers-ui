@@ -12,7 +12,7 @@ export default function useBooking() {
   const bookNow = async () => {
     setLoading(true);
     try {
-      const resp = await axios.post(`${localhost}/bookings`, state, {
+      const resp = await axios.post(`${server}/bookings`, state, {
         headers: {
           Authorization: `${token}`,
         },
@@ -30,7 +30,7 @@ export default function useBooking() {
   const confirmNow = async () => {
     setLoading(true);
     try {
-      const resp = await axios.patch(`${localhost}/bookings`, update, {
+      const resp = await axios.patch(`${server}/bookings`, update, {
         headers: {
           Authorization: `${token}`,
         },
