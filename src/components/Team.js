@@ -1,5 +1,8 @@
+import charlotte from "../assets/charlotte.jpg";
 import josiah from "../assets/josiah.jpeg";
 import liz from "../assets/liz.jpg";
+import ngacha from "../assets/ngacha.jpg";
+import sam from "../assets/sam.jpg";
 
 export default function Teams() {
   return (
@@ -178,6 +181,213 @@ export default function Teams() {
                 {/* Linkedin Icon */}
                 <a
                   href="https://www.linkedin.com/in/liz-d-mukami"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
+                >
+                  <svg
+                    role="img"
+                    viewBox="0 0 24 24"
+                    className="h-5"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <title>LinkedIn</title>
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          {/* Sam */}
+          <div>
+            <div className="relative pb-56 mb-4 rounded shadow lg:pb-64">
+              <a
+                href="https://github.com/sammuthaiga"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  className="absolute object-cover w-full h-full rounded"
+                  src={sam}
+                  alt="Sam Muthaiga"
+                />
+              </a>
+            </div>
+            <div className="flex flex-col sm:text-center">
+              <p className="text-lg font-bold">Liz Wambeti</p>
+              <p className="mb-5 font-mono text-sm text-gray-800">
+                The Frontend Engineer
+              </p>
+              {/* Icons */}
+              <div className="flex items-center space-x-3 sm:justify-center">
+                {/* Twitter Icon */}
+                <a
+                  href="https://twitter.com/Muthaiga1Samuel"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
+                >
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
+                    <title>Twitter</title>
+                    <path d="M24,4.6c-0.9,0.4-1.8,0.7-2.8,0.8c1-0.6,1.8-1.6,2.2-2.7c-1,0.6-2,1-3.1,1.2c-0.9-1-2.2-1.6-3.6-1.6 c-2.7,0-4.9,2.2-4.9,4.9c0,0.4,0,0.8,0.1,1.1C7.7,8.1,4.1,6.1,1.7,3.1C1.2,3.9,1,4.7,1,5.6c0,1.7,0.9,3.2,2.2,4.1 C2.4,9.7,1.6,9.5,1,9.1c0,0,0,0,0,0.1c0,2.4,1.7,4.4,3.9,4.8c-0.4,0.1-0.8,0.2-1.3,0.2c-0.3,0-0.6,0-0.9-0.1c0.6,2,2.4,3.4,4.6,3.4 c-1.7,1.3-3.8,2.1-6.1,2.1c-0.4,0-0.8,0-1.2-0.1c2.2,1.4,4.8,2.2,7.5,2.2c9.1,0,14-7.5,14-14c0-0.2,0-0.4,0-0.6 C22.5,6.4,23.3,5.5,24,4.6z" />
+                  </svg>
+                </a>
+                {/* GitHub Icon */}
+                <a
+                  href="https://github.com/sammuthaiga"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
+                >
+                  <svg
+                    role="img"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="h-5"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <title>GitHub</title>
+                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                  </svg>
+                </a>
+                {/* Linkedin Icon */}
+                <a
+                  href="https://www.linkedin.com/in/samuel-muthaiga"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
+                >
+                  <svg
+                    role="img"
+                    viewBox="0 0 24 24"
+                    className="h-5"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <title>LinkedIn</title>
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          {/* Ngacha */}
+          <div>
+            <div className="relative pb-56 mb-4 rounded shadow lg:pb-64">
+              <a
+                href="https://github.com/ngachadavid"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  className="absolute object-cover w-full h-full rounded"
+                  src={ngacha}
+                  alt="Ngacha David"
+                />
+              </a>
+            </div>
+            <div className="flex flex-col sm:text-center">
+              <p className="text-lg font-bold">Liz Wambeti</p>
+              <p className="mb-5 font-mono text-sm text-gray-800">
+                The Backend Lead
+              </p>
+              {/* Icons */}
+              <div className="flex items-center space-x-3 sm:justify-center">
+                {/* Twitter Icon */}
+                <a
+                  href="https://twitter.com/dangsinatra"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
+                >
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
+                    <title>Twitter</title>
+                    <path d="M24,4.6c-0.9,0.4-1.8,0.7-2.8,0.8c1-0.6,1.8-1.6,2.2-2.7c-1,0.6-2,1-3.1,1.2c-0.9-1-2.2-1.6-3.6-1.6 c-2.7,0-4.9,2.2-4.9,4.9c0,0.4,0,0.8,0.1,1.1C7.7,8.1,4.1,6.1,1.7,3.1C1.2,3.9,1,4.7,1,5.6c0,1.7,0.9,3.2,2.2,4.1 C2.4,9.7,1.6,9.5,1,9.1c0,0,0,0,0,0.1c0,2.4,1.7,4.4,3.9,4.8c-0.4,0.1-0.8,0.2-1.3,0.2c-0.3,0-0.6,0-0.9-0.1c0.6,2,2.4,3.4,4.6,3.4 c-1.7,1.3-3.8,2.1-6.1,2.1c-0.4,0-0.8,0-1.2-0.1c2.2,1.4,4.8,2.2,7.5,2.2c9.1,0,14-7.5,14-14c0-0.2,0-0.4,0-0.6 C22.5,6.4,23.3,5.5,24,4.6z" />
+                  </svg>
+                </a>
+                {/* GitHub Icon */}
+                <a
+                  href="https://github.com/ngachadavid"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
+                >
+                  <svg
+                    role="img"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="h-5"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <title>GitHub</title>
+                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                  </svg>
+                </a>
+                {/* Linkedin Icon */}
+                <a
+                  href="https://www.linkedin.com/in/david-mwangi-91834b274"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
+                >
+                  <svg
+                    role="img"
+                    viewBox="0 0 24 24"
+                    className="h-5"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <title>LinkedIn</title>
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          {/* Charlotte */}
+          <div>
+            <div className="relative pb-56 mb-4 rounded shadow lg:pb-64">
+              <a
+                href="https://github.com/charlotte283"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  className="absolute object-cover w-full h-full rounded"
+                  src={charlotte}
+                  alt="Charlotte Karimi"
+                />
+              </a>
+            </div>
+            <div className="flex flex-col sm:text-center">
+              <p className="text-lg font-bold">Liz Wambeti</p>
+              <p className="mb-5 font-mono text-sm text-gray-800">
+                Backend Engineer
+              </p>
+              {/* Icons */}
+              <div className="flex items-center space-x-3 sm:justify-center">
+                {/* GitHub Icon */}
+                <a
+                  href="https://github.com/charlotte283"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
+                >
+                  <svg
+                    role="img"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="h-5"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <title>GitHub</title>
+                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                  </svg>
+                </a>
+                {/* Linkedin Icon */}
+                <a
+                  href="https://www.linkedin.com/in/charlotte-mujuri-1687b3213"
                   target="_blank"
                   rel="noreferrer"
                   className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"

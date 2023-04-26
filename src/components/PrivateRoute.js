@@ -1,4 +1,4 @@
-import useAuth from "auth/useAuth";
+import useAuth from "hooks/useAuth";
 import { Navigate, useLocation } from "react-router-dom";
 
 function PrivateRoute(props) {

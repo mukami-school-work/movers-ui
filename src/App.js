@@ -1,18 +1,25 @@
-import useAuth from "auth/useAuth";
 import { PrivateRoute } from "components";
+import useAuth from "hooks/useAuth";
 import { Landing } from "pages";
 import Profile from "pages/profile-page/Profile";
 import Reviews from "pages/reviews-page/Reviews";
 import Search from "pages/search-page/Search";
 import { Route, Routes } from "react-router-dom";
+import { CubeSpinner } from "react-spinners-kit";
 import Navbar from "./components/Navbar";
+import ApartmentsPage from "./pages/apartments/ApartmentsPage";
 import BoxesRange from "./pages/boxes-page/BoxesRange";
 import ListingsPage from "./pages/listings page/ListingsPage";
+import Location from "./pages/location/Location";
 import Login from "./pages/signup-page/LoginPage";
 import Signup from "./pages/signup-page/SignUpPage";
 
 function App() {
-  const { user, login, logout, localhost, server, isLogin } = useAuth();
+  const { user, login, logout, spinner, localhost, server, isLogin, loading } =
+    useAuth();
+  if (loading) {
+    return spinner();
+  }
   return (
     <>
       <Navbar isLogin={isLogin} user={user} logout={logout} />
@@ -47,7 +54,7 @@ function App() {
           }
         />
         <Route
-          path="/location"
+          path="/search"
           element={
             <PrivateRoute>
               <Search />
@@ -63,10 +70,26 @@ function App() {
           }
         />
         <Route
+          path="/location"
+          element={
+            <PrivateRoute>
+              <Location />
+            </PrivateRoute>
+          }
+        />
+        <Route
           path="/profile"
           element={
             <PrivateRoute>
               <Profile />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/apartment"
+          element={
+            <PrivateRoute>
+              <ApartmentsPage />
             </PrivateRoute>
           }
         />

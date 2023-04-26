@@ -97,11 +97,14 @@ const Testimonials = () => {
                 </g>
               </svg>
               <p className="text-xl font-medium text-gray-800 lg:mt-7 lg:text-xl lg:leading-normal dark:text-gray-200">
-                "To say that switching to Preline has been life-changing is an
-                understatement. My business has tripled and I got my life back.
-                To say that switching to Preline has been life-changing is an
-                understatement. My business has tripled and I got my life back.
-                "
+                Moving to a new place can be a hassle, especially when you have
+                to find a trustworthy and cost-effective moving company but
+                Movers was a lifesaver. The app was very user-friendly and
+                intuitive. It asked me some simple questions and then showed me
+                a list of the best moving companies in my vicinity. They were
+                courteous, efficient, fast, and careful with my stuff. I would
+                definitely use this application again and recommend it to anyone
+                who needs a mover.
               </p>
 
               <footer className="mt-6">
