@@ -18,7 +18,11 @@ const Search = () => {
   useEffect(() => {
     const fetchInventories = async () => {
       setLoading(true);
-      const res = await axios.get("http://127.0.0.1:4000/inventories");
+      const res = await axios.get("http://127.0.0.1:4000/inventories",{
+        method: "GET",
+        headers: {
+        Authorization: localStorage.getItem("jwt")
+      }});
       console.log(res.data);
       setInventories(res.data);
       setFilterinventory(res.data);
