@@ -66,7 +66,16 @@ Fork this repository.
 - Create a new branch for your changes.
 - Make your changes and commit them.
 - Push your changes to your forked repository.
-- Create a pull request to merge your changes into the main repository.
+- Create a pull request to merge your changes into the main repository.## Screenshots
+
+Here are some screenshots of the user interface:
+
+<!-- ## User Interface
+
+### Home Page
+
+![Hero page](/src/assets/hero.png)
+*The hero section of the application, showing a preview of the UI* -->
 
 ## Color Reference
 
@@ -129,7 +138,7 @@ Add badges from somewhere like: [shields.io](https://shields.io/)
 
 ## Screenshots
 
-![App Screenshot]()
+![App Screenshot](/src/assets/hero.png)
 
 
 ## Deployment

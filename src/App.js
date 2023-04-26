@@ -65,7 +65,7 @@ function App() {
           }
         />
         <Route
-          path="/pickup"
+          path="/location"
           element={
             <PrivateRoute>
               <Location />
