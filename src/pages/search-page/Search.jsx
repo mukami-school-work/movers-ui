@@ -73,33 +73,6 @@ const Search = () => {
     }
   };
 
-  // const handleIncreaseQuantity = (item) => {
-  //   const index = cartItems.findIndex((cartItem) => cartItem.id === item.id);
-  //   if (index >= 0) {
-  //     const newCartItems = [...cartItems];
-  //     const quantity = parseInt(newCartItems[index].quantity); // Convert quantity to a number
-  //     if (!isNaN(quantity)) {
-  //       // Check if quantity is a valid number
-  //       newCartItems[index].quantity = quantity + 1; // Increment the quantity by one
-  //       setCartItems(newCartItems);
-  //       console.log(newCartItems);
-        
-  //     }
-  //   }
-  // };
-
-  // const handleDecreaseQuantity = (item) => {
-  //   const index = cartItems.findIndex((cartItem) => cartItem.id === item.id);
-  //   if (index >= 0) {
-  //     const newCartItems = [...cartItems];
-  //     newCartItems[index].quantity -= 1;
-  //     if (newCartItems[index].quantity === 0) {
-  //       newCartItems.splice(index, 1);
-  //     }
-  //     setCartItems(newCartItems);
-  //   }
-  // };
-
   const handleRemoveFromCart = (item) => {
     const newCartItems = cartItems.filter(
       (cartItem) => cartItem.id !== item.id
@@ -171,19 +144,6 @@ const Search = () => {
                   <div key={item.id} className="flex justify-between mb-2">
                     <div>{item.name}</div>
                     <div className="flex items-center">
-                      {/* <button
-                        className="bg-gray-200 text-gray-700 px-2 py-1 rounded-md mr-2 focus:outline-none"
-                        onClick={() => handleDecreaseQuantity(item)}
-                      >
-                        -
-                      </button> */}
-                      {/* <span>{item.quantity}</span> */}
-                      {/* <button
-                        className="bg-gray-200 text-gray-700 px-2 py-1 rounded-md ml-2 focus:outline-none"
-                        onClick={() => handleIncreaseQuantity(item)}
-                      >
-                        +
-                      </button> */}
 
                       {/* remove from cart button */}
                       <button
