@@ -68,15 +68,6 @@ Fork this repository.
 - Push your changes to your forked repository.
 - Create a pull request to merge your changes into the main repository.## Screenshots
 
-Here are some screenshots of the user interface:
-
-<!-- ## User Interface
-
-### Home Page
-
-![Hero page](/src/assets/hero.png)
-*The hero section of the application, showing a preview of the UI* -->
-
 ## Color Reference
 
 | Color             | Hex                                                                |
