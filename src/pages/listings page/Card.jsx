@@ -4,7 +4,12 @@ function Card() {
    const [cards, setCards] = useState([]);
 
    useEffect(() => {
-     fetch("http://localhost:4000/movers") // replace with your backend API endpoint
+     fetch("http://localhost:4000/movers", {
+       method: "GET",
+       headers: {
+         Authorization: localStorage.getItem("jwt"),
+       },
+     }) // replace with your backend API endpoint
        .then((response) => response.json())
        .then((cards) => setCards(cards));
    }, []);

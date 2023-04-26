@@ -13,7 +13,7 @@ export default function useAuth() {
 
   const login = async (email, password) => {
     try {
-      const resp = await axios.post(`${server}/login`, {
+      const resp = await axios.post(`${localhost}/login`, {
         email: email,
         password: password,
       });
@@ -43,7 +43,7 @@ export default function useAuth() {
       if (token) {
         try {
           // Send a GET request to your backend endpoint to check for authentication
-          const resp = await axios.get(`${server}/profile`, {
+          const resp = await axios.get(`${localhost}/profile`, {
             headers: {
               Authorization: `${token}`,
             },

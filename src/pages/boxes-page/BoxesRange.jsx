@@ -8,7 +8,11 @@ function BoxesRange() {
   const [ranges, setRanges] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:4000/boxes') // replace with your backend API endpoint
+    fetch('http://localhost:4000/boxes',{
+        method: "GET",
+        headers: {
+        Authorization: localStorage.getItem("jwt")
+      }}) // replace with your backend API endpoint
       .then((response) => response.json())
       .then((data) => setRanges(data));
   }, []);
