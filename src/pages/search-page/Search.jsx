@@ -171,12 +171,12 @@ const Search = () => {
                   <div key={item.id} className="flex justify-between mb-2">
                     <div>{item.name}</div>
                     <div className="flex items-center">
-                      <button
+                      {/* <button
                         className="bg-gray-200 text-gray-700 px-2 py-1 rounded-md mr-2 focus:outline-none"
                         onClick={() => handleDecreaseQuantity(item)}
                       >
                         -
-                      </button>
+                      </button> */}
                       <span>{item.quantity}</span>
                       {/* <button
                         className="bg-gray-200 text-gray-700 px-2 py-1 rounded-md ml-2 focus:outline-none"
