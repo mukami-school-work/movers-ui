@@ -1,14 +1,9 @@
-import useAuth from "auth/useAuth";
-import axios from "axios";
+import useAuth from "hooks/useAuth";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { CubeSpinner } from "react-spinners-kit";
 
 export default function Signup() {
-  const { setUser } = useAuth();
-  const [localhost, server] = [
-    "http://localhost:4000",
-    "https://rails-lszl.onrender.com",
-  ];
+  const { signup, errors, loading } = useAuth();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -16,9 +11,19 @@ export default function Signup() {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [profilePicture, setProfilePicture] = useState(null);
   const [passwordVisible, setPasswordVisible] = useState(false);
-  const [errors, setErrors] = useState([]);
-  const navigate = useNavigate();
 
+  if (loading) {
+    return (
+      <div className="spinner">
+        <CubeSpinner
+          size={100}
+          frontColor="#08cf65"
+          backColor="black"
+          loading={loading}
+        />
+      </div>
+    );
+  }
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
   };
@@ -66,44 +71,7 @@ export default function Signup() {
       alert("Please upload a profile picture.");
       return;
     }
-
-    // Upload the profile picture to Cloudinary
-    const formData = new FormData();
-    formData.append("file", profilePicture);
-    formData.append("upload_preset", "bfnewdcr");
-    axios
-      .post("https://api.cloudinary.com/v1_1/dtyavz3qy/image/upload", formData)
-      .then((response) => {
-        console.log(response.data.secure_url);
-        // Send the form data to the backend with the Cloudinary URL
-        const railsData = {
-          name: name,
-          email: email,
-          password: password,
-          password_confirmation: confirmPassword,
-          phone: phoneNumber,
-          image: response.data.secure_url,
-        };
-        axios
-          .post(`${server}/users`, railsData)
-          .then((response) => {
-            console.log(response.data);
-            setUser(response.data.user);
-            localStorage.setItem("jwt", response.data.jwt);
-            navigate("/");
-            window.location.reload();
-          })
-          .catch((error) => {
-            console.log(error);
-            setErrors((prev) => [...prev, error.response.data.error]);
-            setTimeout(() => {
-              setErrors([]);
-            }, 5000);
-          });
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    signup(email, password, profilePicture, name, confirmPassword, phoneNumber);
   };
 
   return (

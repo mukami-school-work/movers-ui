@@ -64,3 +64,30 @@ input[type=file]::file-selector-button {
   cursor: pointer;
   transition: background .2s ease-in-out;
 }
+.spinner {
+	margin: auto;
+	width: 50%;
+	height: 50%;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	transform: translate(50%, -50%);
+	background-color: transparent;
+	display: flex;
+	align-items: center;
+  justify-content: center;
+	flex-direction: row;
+	border-radius: 10px;
+	flex-wrap: wrap;
+}
+/*
+.spinner {
+	margin: 5%;
+	padding: 20px;
+}
+
+.tag {
+	text-align: center;
+	font-size: 2rem;
+	color: green;
+} */
