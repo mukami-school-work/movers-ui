@@ -16,7 +16,7 @@ function Card() {
 
     return (
       <>
-        {/* {cards.map((card) => ( */}
+        {cards.map((card) => (
         <div className="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4">
           <div className="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
             <div className="relative pb-48 overflow-hidden">
@@ -41,7 +41,7 @@ function Card() {
                 </div>
               </div>
               <h2 className="mt-2 mb-2 font-bold">
-                International Van Lines
+                {card.name}
               </h2>
               <div class="relative sm:w-1/2 md:w-1/2 xl:w-1/4">
                 {/* <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -155,7 +155,7 @@ function Card() {
             </div>
           </div>
         </div>
-        {/* ))} */}
+         ))} 
       </>
     );
 }

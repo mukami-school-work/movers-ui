@@ -17,9 +17,6 @@ const ListingsPage = () => {
       <div className="container mx-auto">
         <div className="flex flex-wrap -mx-4">
           <Card />
-          <Card />
-          <Card />
-          <Card />
         </div>
       </div>
     </div>
