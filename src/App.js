@@ -1,10 +1,11 @@
-import useAuth from "auth/useAuth";
 import { PrivateRoute } from "components";
+import useAuth from "hooks/useAuth";
 import { Landing } from "pages";
 import Profile from "pages/profile-page/Profile";
 import Reviews from "pages/reviews-page/Reviews";
 import Search from "pages/search-page/Search";
 import { Route, Routes } from "react-router-dom";
+import { CubeSpinner } from "react-spinners-kit";
 import Navbar from "./components/Navbar";
 import ApartmentsPage from "./pages/apartments/ApartmentsPage";
 import BoxesRange from "./pages/boxes-page/BoxesRange";
@@ -14,7 +15,11 @@ import Login from "./pages/signup-page/LoginPage";
 import Signup from "./pages/signup-page/SignUpPage";
 
 function App() {
-  const { user, login, logout, localhost, server, isLogin } = useAuth();
+  const { user, login, logout, spinner, localhost, server, isLogin, loading } =
+    useAuth();
+  if (loading) {
+    return spinner();
+  }
   return (
     <>
       <Navbar isLogin={isLogin} user={user} logout={logout} />

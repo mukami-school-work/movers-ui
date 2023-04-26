@@ -27,7 +27,7 @@ export default function Hero({ isLogin }) {
             <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
               {isLogin ? (
                 <a
-                  href="/location"
+                  href="/pickup"
                   className="inline-flex items-center justify-center h-12 px-12 font-semibold tracking-wide transition duration-200 rounded-lg shadow-md text-primary-green py-7 dark:bg-violet-400 dark:text-gray-900 bg-black-800 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
                 >
                   Get Quote

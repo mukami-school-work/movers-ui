@@ -1,13 +1,18 @@
-import useAuth from "auth/useAuth";
+import useAuth from "hooks/useAuth";
 import { useState } from "react";
+import { CubeSpinner } from "react-spinners-kit";
 
 export default function Login() {
   const [passwordVisible, setPasswordVisible] = useState(false);
-  const { login, errors, isLogin, navigate } = useAuth();
+  const { login, errors, isLogin, navigate, loading, spinner } = useAuth();
 
   if (isLogin) {
     navigate("/");
     window.location.reload();
+  }
+
+  if (loading) {
+    return spinner();
   }
   const handleSubmit = async (e) => {
     e.preventDefault();
