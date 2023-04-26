@@ -8,7 +8,11 @@ function ApartmentsPage() {
   const [apartments, setApartments] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:4000/apartments")
+    fetch("http://localhost:4000/apartments",{
+        method: "GET",
+        headers: {
+        Authorization: localStorage.getItem("jwt")
+      }})
       .then((response) => response.json())
       .then((data) => setApartments(data))
       .catch((error) => console.log(error));
@@ -23,6 +27,7 @@ function ApartmentsPage() {
    
   };
 
+  console.log(Array.isArray(apartments));
 
   return (
     <div className="w-screen h-screen flex flex-col justify-center items-center">
