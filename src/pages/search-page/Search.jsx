@@ -88,17 +88,17 @@ const Search = () => {
     }
   };
 
-  const handleDecreaseQuantity = (item) => {
-    const index = cartItems.findIndex((cartItem) => cartItem.id === item.id);
-    if (index >= 0) {
-      const newCartItems = [...cartItems];
-      newCartItems[index].quantity -= 1;
-      if (newCartItems[index].quantity === 0) {
-        newCartItems.splice(index, 1);
-      }
-      setCartItems(newCartItems);
-    }
-  };
+  // const handleDecreaseQuantity = (item) => {
+  //   const index = cartItems.findIndex((cartItem) => cartItem.id === item.id);
+  //   if (index >= 0) {
+  //     const newCartItems = [...cartItems];
+  //     newCartItems[index].quantity -= 1;
+  //     if (newCartItems[index].quantity === 0) {
+  //       newCartItems.splice(index, 1);
+  //     }
+  //     setCartItems(newCartItems);
+  //   }
+  // };
 
   const handleRemoveFromCart = (item) => {
     const newCartItems = cartItems.filter(
