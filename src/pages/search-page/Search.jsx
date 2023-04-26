@@ -73,15 +73,6 @@ const Search = () => {
     }
   };
 
-  // const handleIncreaseQuantity = (item) => {
-  //   const index = cartItems.findIndex((cartItem) => cartItem.id === item.id);
-  //   if (index >= 0) {
-  //     const newCartItems = [...cartItems];
-  //     newCartItems[index].quantity += 1;
-  //     setCartItems(newCartItems);
-  //   }
-  // };
-
   const handleIncreaseQuantity = (item) => {
     const index = cartItems.findIndex((cartItem) => cartItem.id === item.id);
     if (index >= 0) {
