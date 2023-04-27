@@ -56,9 +56,7 @@ const Search = () => {
     // handle search logic here
   };
 
-  const handleNextClick = () => {
-    setUser_id(user.id);
-  };
+  const handleNextClick = () => {};
 
   const handleCartToggle = () => {
     setCartVisible(!cartVisible);
@@ -102,7 +100,6 @@ const Search = () => {
       setCartItems(newCartItems);
     }
   };
-
 
   const handleRemoveFromCart = (item) => {
     const newCartItems = cartItems.filter(
@@ -154,7 +151,7 @@ const Search = () => {
             and confirming all items you wish to move.
           </p>
         </div>
-        <form onSubmit={handleSearch} className="w-full max-w-lg mt-8">
+        <form className="w-full max-w-lg mt-8">
           <div className="relative">
             <input
               type="text"

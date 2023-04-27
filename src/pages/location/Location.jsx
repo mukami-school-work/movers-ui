@@ -1,11 +1,18 @@
 import { StateContext, StateProvider } from "hooks/stateProvider";
+import useAuth from "hooks/useAuth";
 import { useContext } from "react";
 import { FiChevronDown } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
 function LocationPage() {
-  const { state, setPickup_address, setDestination_address, setBook_date } =
-    useContext(StateContext);
+  const {
+    state,
+    setUser_id,
+    setPickup_address,
+    setDestination_address,
+    setBook_date,
+  } = useContext(StateContext);
+  const { user } = useAuth();
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -18,8 +25,8 @@ function LocationPage() {
     }
     console.log(state);
   };
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = () => {
+    setUser_id(user.id);
   };
   return (
     <div className="flex flex-col justify-center min-h-screen m-0 bg-white">
@@ -106,8 +113,8 @@ function LocationPage() {
               </div>
             </div>
             <Link
-              type="submit"
               to="/apartment"
+              onClick={handleSubmit}
               className={`inline-flex items-center justify-center h-16 px-6 ml-8 text-sm font-semibold tracking-wide text-white transition duration-200 border-transparent rounded-lg shadow-md w-sm bg-primary-green hover:bg-deep-purple-accent-700 hover:cursor-pointer focus:shadow-outline focus:outline-none ${
                 state.book_date ? "" : "opacity-50 cursor-not-allowed"
               }`}

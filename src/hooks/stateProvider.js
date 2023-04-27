@@ -52,7 +52,7 @@ export const StateProvider = ({ children }) => {
   const setBooking_id = (booking_id) => {
     setUpdate({ ...update, booking_id });
   };
-  // console.log({ state });
+  console.log(state);
   console.log({ update });
   // console.log({ booking });
   // console.log({ quotes });

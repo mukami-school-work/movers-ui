@@ -108,9 +108,7 @@ function BoxesRange() {
           Prev Inventory
         </Link>
         <button
-          className={`inline-flex items-center justify-center h-14 px-6 ml-8 text-sm font-semibold tracking-wide text-white transition duration-200 border-transparent rounded-lg shadow-md w-sm bg-primary-green hover:bg-deep-purple-accent-700 hover:cursor-pointer focus:shadow-outline focus:outline-none ${
-            selected ? "" : "opacity-50 cursor-not-allowed"
-          }`}
+          className={`inline-flex items-center justify-center h-14 px-6 ml-8 text-sm font-semibold tracking-wide text-white transition duration-200 border-transparent rounded-lg shadow-md w-sm bg-primary-green hover:bg-deep-purple-accent-700 hover:cursor-pointer focus:shadow-outline focus:outline-none`}
           onClick={handleSubmit}
           // disabled={!selected}
         >

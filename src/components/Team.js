@@ -215,7 +215,7 @@ export default function Teams() {
               </a>
             </div>
             <div className="flex flex-col sm:text-center">
-              <p className="text-lg font-bold">Liz Wambeti</p>
+              <p className="text-lg font-bold">Sam Muthaiga</p>
               <p className="mb-5 font-mono text-sm text-gray-800">
                 The Frontend Engineer
               </p>
@@ -288,7 +288,7 @@ export default function Teams() {
               </a>
             </div>
             <div className="flex flex-col sm:text-center">
-              <p className="text-lg font-bold">Liz Wambeti</p>
+              <p className="text-lg font-bold">David Ngacha</p>
               <p className="mb-5 font-mono text-sm text-gray-800">
                 The Backend Lead
               </p>
@@ -361,7 +361,7 @@ export default function Teams() {
               </a>
             </div>
             <div className="flex flex-col sm:text-center">
-              <p className="text-lg font-bold">Liz Wambeti</p>
+              <p className="text-lg font-bold">Charlotte Karimi</p>
               <p className="mb-5 font-mono text-sm text-gray-800">
                 Backend Engineer
               </p>

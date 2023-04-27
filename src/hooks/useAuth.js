@@ -49,7 +49,7 @@ export default function useAuth() {
           console.log(error);
         }
 
-        // Fetch Inventories
+        // Fetch Boxes
         try {
           const resp = await axios.get(`${server}/boxes`, {
             headers: {
