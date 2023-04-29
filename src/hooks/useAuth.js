@@ -13,8 +13,7 @@ export default function useAuth() {
   const token = localStorage.getItem("jwt");
   const [localhost, server] = [
     "http://localhost:4000",
-    "http://localhost:4000",
-    // "https://rails-lszl.onrender.com",
+    "https://rails-lszl.onrender.com",
   ];
   const navigate = useNavigate();
 
