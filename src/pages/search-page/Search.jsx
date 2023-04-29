@@ -1,4 +1,4 @@
-import { ArrowRightIcon, SearchIcon } from "@heroicons/react/outline";
+import { SearchIcon } from "@heroicons/react/outline";
 import axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -10,8 +10,8 @@ import Inventories from "./Inventories";
 const Search = () => {
   const [inventories, setInventories] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [inventoriesPerPage, setInventoriesPerPage] = useState(10);
+  const [currentPage] = useState(1);
+  const [inventoriesPerPage] = useState(10);
   const [filterinventory, setFilterinventory] = useState([]);
   const [cartItems, setCartItems] = useState([]);
   const [cartVisible, setCartVisible] = useState(false);
