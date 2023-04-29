@@ -70,7 +70,7 @@ function App() {
           }
         />
         <Route
-          path="/location"
+          path="/pickup"
           element={
             <PrivateRoute>
               <Location />

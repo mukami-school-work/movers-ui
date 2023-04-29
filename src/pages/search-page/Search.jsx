@@ -64,44 +64,84 @@ const Search = () => {
     setCartVisible(!cartVisible);
   };
 
+  // const handleAddToCart = (item) => {
+  //   const index = cartItems.findIndex((cartItem) => cartItem.id === item.id);
+  //   if (index >= 0) {
+  //     // item already exists in cart, update quantity
+  //     const newCartItems = [...cartItems];
+  //     newCartItems[index].quantity += item.quantity;
+  //     setCartItems(newCartItems);
+  //   } else {
+  //     // item doesn't exist in cart, add to cart
+  //     setCartItems([...cartItems, item]);
+  //   }
+  // };
+
   const handleAddToCart = (item) => {
     const index = cartItems.findIndex((cartItem) => cartItem.id === item.id);
     if (index >= 0) {
       // item already exists in cart, update quantity
       const newCartItems = [...cartItems];
-      newCartItems[index].quantity += item.quantity;
+      newCartItems[index].quantity += 1;
       setCartItems(newCartItems);
     } else {
       // item doesn't exist in cart, add to cart
-      setCartItems([...cartItems, item]);
+      const newItem = { ...item, quantity: 1 }; // Initialize quantity to 1
+      setCartItems([...cartItems, newItem]);
     }
   };
+
+
+  // const handleIncreaseQuantity = (item) => {
+  //   const index = cartItems.findIndex((cartItem) => cartItem.id === item.id);
+  //   if (index >= 0) {
+  //     const newCartItems = [...cartItems];
+  //     const quantity = parseInt(newCartItems[index].quantity); // Convert quantity to a number
+  //     if (!isNaN(quantity)) {
+  //       // Check if quantity is a valid number
+  //       newCartItems[index].quantity = quantity + 1; // Increment the quantity by one
+  //       setCartItems(newCartItems);
+  //       console.log(newCartItems);
+  //     }
+  //   }
+  // };
 
   const handleIncreaseQuantity = (item) => {
     const index = cartItems.findIndex((cartItem) => cartItem.id === item.id);
     if (index >= 0) {
       const newCartItems = [...cartItems];
-      const quantity = parseInt(newCartItems[index].quantity); // Convert quantity to a number
-      if (!isNaN(quantity)) {
-        // Check if quantity is a valid number
-        newCartItems[index].quantity = quantity + 1; // Increment the quantity by one
-        setCartItems(newCartItems);
-        console.log(newCartItems);
-      }
+      newCartItems[index].quantity += 1; // Increment the quantity by one
+      setCartItems(newCartItems);
+      console.log(newCartItems);
     }
   };
+
+
+  // const handleDecreaseQuantity = (item) => {
+  //   const index = cartItems.findIndex((cartItem) => cartItem.id === item.id);
+  //   if (index >= 0) {
+  //     const newCartItems = [...cartItems];
+  //     newCartItems[index].quantity -= 1;
+  //     if (newCartItems[index].quantity === 0) {
+  //       newCartItems.splice(index, 1);
+  //     }
+  //     setCartItems(newCartItems);
+  //   }
+  // };
 
   const handleDecreaseQuantity = (item) => {
     const index = cartItems.findIndex((cartItem) => cartItem.id === item.id);
     if (index >= 0) {
       const newCartItems = [...cartItems];
       newCartItems[index].quantity -= 1;
-      if (newCartItems[index].quantity === 0) {
-        newCartItems.splice(index, 1);
+      if (newCartItems[index].quantity <= 0) {
+        // Check if quantity is 0 or less
+        newCartItems.splice(index, 1); // Remove item from cart
       }
       setCartItems(newCartItems);
     }
   };
+
 
 
   const handleRemoveFromCart = (item) => {
