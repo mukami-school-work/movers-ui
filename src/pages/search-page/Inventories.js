@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRightIcon, SearchIcon, PlusIcon, MinusIcon, ShoppingCartIcon, XIcon,TrashIcon } from "@heroicons/react/outline";
+import { PlusIcon } from "@heroicons/react/outline";
 
 const Inventories = ({ inventories, loading, handleAddToCart }) => {
   if (loading) {

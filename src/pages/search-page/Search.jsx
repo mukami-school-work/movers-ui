@@ -1,4 +1,4 @@
-import { ArrowRightIcon, SearchIcon } from "@heroicons/react/outline";
+import { SearchIcon } from "@heroicons/react/outline";
 import axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -10,8 +10,8 @@ import Inventories from "./Inventories";
 const Search = () => {
   const [inventories, setInventories] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [inventoriesPerPage, setInventoriesPerPage] = useState(10);
+  const [currentPage] = useState(1);
+  const [inventoriesPerPage] = useState(10);
   const [filterinventory, setFilterinventory] = useState([]);
   const [cartItems, setCartItems] = useState([]);
   const [cartVisible, setCartVisible] = useState(false);
@@ -69,11 +69,12 @@ const Search = () => {
     if (index >= 0) {
       // item already exists in cart, update quantity
       const newCartItems = [...cartItems];
-      newCartItems[index].quantity += item.quantity;
+      newCartItems[index].quantity += 1;
       setCartItems(newCartItems);
     } else {
       // item doesn't exist in cart, add to cart
-      setCartItems([...cartItems, item]);
+      const newItem = { ...item, quantity: 1 }; // Initialize quantity to 1
+      setCartItems([...cartItems, newItem]);
     }
   };
 
@@ -81,13 +82,9 @@ const Search = () => {
     const index = cartItems.findIndex((cartItem) => cartItem.id === item.id);
     if (index >= 0) {
       const newCartItems = [...cartItems];
-      const quantity = parseInt(newCartItems[index].quantity); // Convert quantity to a number
-      if (!isNaN(quantity)) {
-        // Check if quantity is a valid number
-        newCartItems[index].quantity = quantity + 1; // Increment the quantity by one
-        setCartItems(newCartItems);
-        console.log(newCartItems);
-      }
+      newCartItems[index].quantity += 1; // Increment the quantity by one
+      setCartItems(newCartItems);
+      console.log(newCartItems);
     }
   };
 
@@ -96,13 +93,13 @@ const Search = () => {
     if (index >= 0) {
       const newCartItems = [...cartItems];
       newCartItems[index].quantity -= 1;
-      if (newCartItems[index].quantity === 0) {
-        newCartItems.splice(index, 1);
+      if (newCartItems[index].quantity <= 0) {
+        // Check if quantity is 0 or less
+        newCartItems.splice(index, 1); // Remove item from cart
       }
       setCartItems(newCartItems);
     }
   };
-
 
   const handleRemoveFromCart = (item) => {
     const newCartItems = cartItems.filter(
@@ -151,7 +148,11 @@ const Search = () => {
           </h2>
           <p className="font-medium text-gray-700 lg:text-lg md:text-sm">
             To get the most precise price range, we recommend going room by room
-            and confirming all items you wish to move.
+            and confirming all items you wish to move. 
+          </p>
+          <p className="font-medium text-gray-700 lg:text-lg pt-4 md:text-sm">If you cannot find an
+            item that you wish to move in the provided list, please use the
+            search box to search for it.
           </p>
         </div>
         <form onSubmit={handleSearch} className="w-full max-w-lg mt-8">
