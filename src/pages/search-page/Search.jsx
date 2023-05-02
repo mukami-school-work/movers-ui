@@ -1,9 +1,8 @@
 import { SearchIcon } from "@heroicons/react/outline";
 import axios from "axios";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import { StateContext } from "hooks/stateProvider";
 import useAuth from "hooks/useAuth";
 import Inventories from "./Inventories";
 
@@ -16,8 +15,7 @@ const Search = () => {
   const [cartItems, setCartItems] = useState([]);
   const [cartVisible, setCartVisible] = useState(false);
   const [selected, setSelected] = useState();
-  const { user, server } = useAuth();
-  const { setUser_id } = useContext(StateContext);
+  const { server } = useAuth();
 
   useEffect(() => {
     const fetchInventories = async () => {
@@ -50,11 +48,6 @@ const Search = () => {
     indexOfFirstPost,
     indexOfLastPost
   );
-
-  const handleSearch = (e) => {
-    e.preventDefault();
-    // handle search logic here
-  };
 
   const handleNextClick = () => {};
 
@@ -146,11 +139,11 @@ const Search = () => {
           </h2>
           <p className="font-medium text-gray-700 lg:text-lg md:text-sm">
             To get the most precise price range, we recommend going room by room
-            and confirming all items you wish to move. 
+            and confirming all items you wish to move.
           </p>
-          <p className="font-medium text-gray-700 lg:text-lg pt-4 md:text-sm">If you cannot find an
-            item that you wish to move in the provided list, please use the
-            search box to search for it.
+          <p className="pt-4 font-medium text-gray-700 lg:text-lg md:text-sm">
+            If you cannot find an item that you wish to move in the provided
+            list, please use the search box to search for it.
           </p>
         </div>
         <form className="w-full max-w-lg mt-8">

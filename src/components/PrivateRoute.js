@@ -1,9 +1,7 @@
-import useAuth from "hooks/useAuth";
 import { Navigate, useLocation } from "react-router-dom";
 
 function PrivateRoute(props) {
   const location = useLocation();
-  const { user } = useAuth();
   const token = localStorage.getItem("jwt");
   if (!token) {
     // Redirect them to the /login page, but save the current location they were

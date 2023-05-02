@@ -1,6 +1,5 @@
 import useAuth from "hooks/useAuth";
 import { useState } from "react";
-import { CubeSpinner } from "react-spinners-kit";
 
 export default function Login() {
   const [passwordVisible, setPasswordVisible] = useState(false);

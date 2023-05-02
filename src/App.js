@@ -5,7 +5,6 @@ import Profile from "pages/profile-page/Profile";
 import Reviews from "pages/reviews-page/Reviews";
 import Search from "pages/search-page/Search";
 import { Route, Routes } from "react-router-dom";
-import { CubeSpinner } from "react-spinners-kit";
 import Navbar from "./components/Navbar";
 import ApartmentsPage from "./pages/apartments/ApartmentsPage";
 import BoxesRange from "./pages/boxes-page/BoxesRange";

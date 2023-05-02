@@ -1,7 +1,8 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { CubeSpinner } from "react-spinners-kit";
+import { HashLoader } from "react-spinners";
 
 export default function useAuth() {
   const [user, setUser] = useState(null);
@@ -110,7 +111,7 @@ export default function useAuth() {
               Movers
             </p>
           </div>
-          <CubeSpinner
+          <HashLoader
             size={100}
             frontColor="#08cf65"
             backColor="black"

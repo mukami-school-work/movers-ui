@@ -1,6 +1,6 @@
 import useAuth from "hooks/useAuth";
 import { useState } from "react";
-import { CubeSpinner } from "react-spinners-kit";
+import { HashLoader } from "react-spinners";
 
 export default function Signup() {
   const { signup, errors, loading } = useAuth();
@@ -15,7 +15,7 @@ export default function Signup() {
   if (loading) {
     return (
       <div className="spinner">
-        <CubeSpinner
+        <HashLoader
           size={100}
           frontColor="#08cf65"
           backColor="black"
